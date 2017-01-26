@@ -16,9 +16,11 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -95,9 +97,6 @@
                 <behavior-type name="Platform" sid="943067707839619">
                     <behavior id="Platform" />
                 </behavior-type>
-                <behavior-type name="BoundToLayout" sid="944256348584662">
-                    <behavior id="bound" />
-                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472527864458896" speed="5">
@@ -157,10 +156,15 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="668074052139276">
+        <object-type name="arrow" sid="902896096073996">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="394253580945252">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="507681306778856" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373988820893384" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -169,6 +173,7 @@
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
             <members>
+                <member>arrow</member>
                 <member>fireball</member>
                 <member>scythe</member>
             </members>
@@ -177,14 +182,20 @@
                 <instance-variable name="timeToActivate" sid="262698966508429" type="number" />
                 <instance-variable name="Activate" sid="120999645217907" type="string" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="721966340252776">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
-        <layout>Lv01.xml</layout>
+        <layout>Main.xml</layout>
         <layout>Objects.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Player.xml</event-sheet>
+        <event-sheet>Traps.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">

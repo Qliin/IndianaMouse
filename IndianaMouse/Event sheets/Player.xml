@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player</name>
+    <events>
+        <include>Traps</include>
+        <event-block sid="380850622662890">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="423961838799242" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="358644017249199" type="System">
+                    <param id="0" name="Object to create">player</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">initialRespawnPoint.X</param>
+                    <param id="3" name="Y">initialRespawnPoint.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="373145843160507" type="player">
+                    <param id="0" name="Instance variable">currentRespawnX</param>
+                    <param id="1" name="Value">initialRespawnPoint.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="900991235317611" type="player">
+                    <param id="0" name="Instance variable">currentRespawnY</param>
+                    <param id="1" name="Value">initialRespawnPoint.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="737559856319014">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="889343091158228" type="player">
+                    <param id="0" name="Object">jumpPoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="384996281274445" type="player">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="417086745366789">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="778489711978371" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="185386125383527" type="player">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="848411165586863">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="128598684221898" type="player">
+                    <param id="0" name="Object">Trap</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="789897272475961" type="player">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="-1" name="Set X" sid="468822882567151" type="player">
+                    <param id="0" name="X">player.currentRespawnX</param>
+                </action>
+                <action disabled="1" id="-2" name="Set Y" sid="587665151020353" type="player">
+                    <param id="0" name="Y">player.currentRespawnY</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="669803633319568" type="player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="894931912783627" type="Trap" />
+            </actions>
+            <sub-events>
+                <event-block sid="233974861926803">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="707239665034668" type="player">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="255944769055143" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="440774517426403">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="202373563886375" type="player">
+                    <param id="0" name="Object">respawnPoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="477804013087893" type="player">
+                    <param id="0" name="Instance variable">currentRespawnX</param>
+                    <param id="1" name="Value">respawnPoint.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="241573033375152" type="player">
+                    <param id="0" name="Instance variable">currentRespawnY</param>
+                    <param id="1" name="Value">respawnPoint.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="558575112772410">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="439155889379402" type="player">
+                    <param id="0" name="Object">exit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="797981613561631" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

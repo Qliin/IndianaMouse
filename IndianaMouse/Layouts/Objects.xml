@@ -71,11 +71,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96.09526062</x>
-                        <y>98.095252991</y>
+                        <x>147</x>
+                        <y>151</y>
                         <z>0</z>
-                        <width>184.304092407</width>
-                        <height>184.304092407</height>
+                        <width>100</width>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -120,9 +120,10 @@
                     <instance-variables>
                         <activated>false</activated>
                         <timeToActivate>1</timeToActivate>
-                        <Activate>activateFireball</Activate>
+                        <Activate>ActivateFireball</Activate>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>300</max-speed>
@@ -135,11 +136,6 @@
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -167,10 +163,13 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>0</timeToActivate>
-                        <Activate></Activate>
-                        <endAngle>0</endAngle>
+                        <timeToActivate>1.5</timeToActivate>
+                        <Activate>ActivateScythe</Activate>
+                        <endAngle>60</endAngle>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

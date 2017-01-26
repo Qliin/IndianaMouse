@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Lv01</name>
+    <name>Main</name>
     <sid>232053086297456</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Player</event-sheet>
     <size>
         <width>3000</width>
         <height>768</height>
@@ -238,10 +238,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1264</x>
+                        <x>1488.5</x>
                         <y>832</y>
                         <z>0</z>
-                        <width>2170</width>
+                        <width>2619</width>
                         <height>136</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -267,11 +267,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1225</x>
+                        <x>1594.5</x>
                         <y>-65</y>
                         <z>0</z>
-                        <width>2170</width>
+                        <width>2909</width>
                         <height>136</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="exit" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2879</x>
+                        <y>481</y>
+                        <z>0</z>
+                        <width>157</width>
+                        <height>330</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -308,9 +330,10 @@
                     <instance-variables>
                         <activated>false</activated>
                         <timeToActivate>1</timeToActivate>
-                        <Activate>activateFireball</Activate>
+                        <Activate>ActivateFireball</Activate>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>300</max-speed>
@@ -325,65 +348,12 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>657</x>
                         <y>717</y>
-                        <z>0</z>
-                        <width>93</width>
-                        <height>91</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="fireball" uid="8">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <activated>false</activated>
-                        <timeToActivate>1</timeToActivate>
-                        <Activate>activateFireball</Activate>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>330</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>1200</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1892</x>
-                        <y>715</y>
                         <z>0</z>
                         <width>93</width>
                         <height>91</height>
@@ -404,9 +374,10 @@
                     <instance-variables>
                         <activated>false</activated>
                         <timeToActivate>1</timeToActivate>
-                        <Activate>activateFireball</Activate>
+                        <Activate>ActivateFireball</Activate>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>300</max-speed>
@@ -419,11 +390,6 @@
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -451,22 +417,65 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>0</timeToActivate>
-                        <Activate></Activate>
+                        <timeToActivate>1.5</timeToActivate>
+                        <Activate>ActivateScythe</Activate>
                         <endAngle>60</endAngle>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1881</x>
-                        <y>18</y>
+                        <x>1882.584716797</x>
+                        <y>18.476200104</y>
                         <z>0</z>
                         <width>59</width>
-                        <height>275</height>
+                        <height>456</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.004</hotspotY>
-                        <angle>-1.03484416</angle>
+                        <angle>-1.317484498</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrow" uid="8">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>1</timeToActivate>
+                        <Activate>ActivateArrow</Activate>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>700</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1877</x>
+                        <y>703</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -489,28 +498,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="exit" uid="11">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2879</x>
-                        <y>481</y>
-                        <z>0</z>
-                        <width>157</width>
-                        <height>330</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="initialRespawnPoint" uid="12">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -579,7 +566,7 @@
                 </instance>
                 <instance type="respawnPoint" uid="16">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
