@@ -3,78 +3,62 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <event-block sid="150800902664019">
+        <event-block sid="281284753699161">
             <conditions>
-                <condition id="17" name="On tap object" sid="794892939678349" type="Touch">
-                    <param id="0" name="Object">fireball</param>
+                <condition id="17" name="On tap object" sid="439453463240694" type="Touch">
+                    <param id="0" name="Object">Trap</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="457248447399496" type="fireball">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="176590982384756" type="Trap">
                     <param id="0" name="Instance variable">activated</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="825177668556996" type="fireball">
+                <action id="-13" name="Set boolean" sid="234893741690323" type="Trap">
                     <param id="0" name="Instance variable">activated</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-3" name="Create object" sid="423879602543873" type="System">
+                <action id="-3" name="Create object" sid="673322797525594" type="System">
                     <param id="0" name="Object to create">trapTime</param>
                     <param id="1" name="Layer">&quot;Traps&quot;</param>
-                    <param id="2" name="X">fireball.X</param>
-                    <param id="3" name="Y">fireball.Y</param>
+                    <param id="2" name="X">Trap.X</param>
+                    <param id="3" name="Y">Trap.Y</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="665693526067320" type="trapTime">
-                    <param id="0" name="Pin to">fireball</param>
-                    <param id="1" name="Mode">0</param>
+                <action id="0" name="Set text" sid="435787979485889" type="trapTime">
+                    <param id="0" name="Text">&quot;&quot;&amp;Trap.timeToActivate</param>
                 </action>
-                <action id="0" name="Set text" sid="293644092905041" type="trapTime">
-                    <param id="0" name="Text">&quot;&quot;&amp;fireball.timeToActivate</param>
-                </action>
-                <action id="0" name="Call function" sid="812719918643493" type="Function">
-                    <param id="0" name="Name">&quot;activateTrap&quot;</param>
-                    <param id="1" name="Parameter {n}">fireball.UID</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="786057980663266">
-            <conditions>
-                <condition behavior="Platform" id="9" name="On landed" sid="295584674500316" type="fireball" />
-                <condition id="-8" name="Is boolean instance variable set" sid="744783588420051" type="fireball">
-                    <param id="0" name="Instance variable">activated</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="120080258819527" type="fireball">
-                    <param id="0" name="Opacity">50</param>
+                <action id="0" name="Call function" sid="363368532462140" type="Function">
+                    <param id="0" name="Name">&quot;&quot;&amp;Trap.Activate</param>
+                    <param id="1" name="Parameter {n}">Trap.UID{###}trapTime.UID</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="828652048733199">
             <conditions>
                 <condition id="0" name="On function" sid="388175720805685" type="Function">
-                    <param id="0" name="Name">&quot;activateTrap&quot;</param>
+                    <param id="0" name="Name">&quot;activateFireball&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="905267992690793">
                     <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="452220556148931" type="System">
-                            <param id="0" name="Object">fireball</param>
-                            <param id="1" name="Expression">fireball.UID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Function.Param(0)</param>
+                        <condition id="-14" name="Pick by unique ID" sid="452220556148931" type="fireball">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="145442353204310" type="trapTime">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="654583840382798">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="549143250360960" type="fireball">
+                                <condition id="-7" name="Compare instance variable" sid="998884051782300" type="fireball">
                                     <param id="0" name="Instance variable">timeToActivate</param>
-                                    <param id="1" name="Comparison">0</param>
+                                    <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="238228104459422" type="System" />
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="947827520882934" type="fireball">
@@ -88,25 +72,38 @@
                                 <condition id="-22" name="Else" sid="840978574672240" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="386158959043727" type="fireball">
-                                    <param id="0" name="Instance variable">timeToActivate</param>
-                                    <param id="1" name="Value">0.5</param>
+                                <action id="-16" name="Wait" sid="489639036353099" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="816826161927874" type="trapTime">
+                                <action id="-12" name="Subtract from" sid="429581134874806" type="fireball">
+                                    <param id="0" name="Instance variable">timeToActivate</param>
+                                    <param id="1" name="Value">0.1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="935583154692147" type="trapTime">
                                     <param id="0" name="Text">&quot;&quot;&amp;fireball.timeToActivate</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="489639036353099" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
-                                </action>
                                 <action id="0" name="Call function" sid="802696880934236" type="Function">
-                                    <param id="0" name="Name">&quot;activateTrap&quot;</param>
-                                    <param id="1" name="Parameter {n}">fireball.UID</param>
+                                    <param id="0" name="Name">&quot;activateFireball&quot;</param>
+                                    <param id="1" name="Parameter {n}">fireball.UID{###}trapTime.UID</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="786057980663266">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="295584674500316" type="fireball" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="806596928928444" type="fireball">
+                    <param id="0" name="Instance variable">activated</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="120080258819527" type="fireball">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
         </event-block>
         <event-group description="" sid="394165891940704" title="Player">
             <sub-events>
@@ -160,7 +157,7 @@
                 <event-block sid="536535656256032">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="441208112567093" type="player">
-                            <param id="0" name="Object">Traps</param>
+                            <param id="0" name="Object">Trap</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -179,7 +176,7 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">0.5</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="632548831944313" type="Traps" />
+                        <action id="-9" name="Destroy" sid="632548831944313" type="Trap" />
                     </actions>
                     <sub-events>
                         <event-block sid="650284905112510">
@@ -225,5 +222,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block disabled="1" sid="694992510557026">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="460742974643286" type="System" />
+            </conditions>
+            <actions>
+                <action id="-20" name="Rotate toward angle" sid="423096995654138" type="scythe">
+                    <param id="0" name="Degrees">2</param>
+                    <param id="1" name="Angle">scythe.endAngle</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

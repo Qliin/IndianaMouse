@@ -17,7 +17,6 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -92,10 +91,6 @@
         </object-type>
         <object-type name="fireball" sid="587055415473060">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="activated" sid="358989915180891" type="boolean" />
-                <instance-variable name="timeToActivate" sid="629407748180992" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="943067707839619">
                     <behavior id="Platform" />
@@ -150,18 +145,38 @@
         </object-type>
         <object-type name="trapTime" sid="191675947125491">
             <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Pin" sid="220072559514793">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
+        </object-type>
+        <object-type name="scythe" sid="689650692459954">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="endAngle" sid="210490187029241" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649093423596081" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.004" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="668074052139276">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="507681306778856" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
-        <family name="Traps" plugin-id="Sprite" sid="871016558091897">
+        <family name="Trap" plugin-id="Sprite" sid="871016558091897">
             <members>
                 <member>fireball</member>
+                <member>scythe</member>
             </members>
+            <instance-variables>
+                <instance-variable name="activated" sid="315417138294303" type="boolean" />
+                <instance-variable name="timeToActivate" sid="262698966508429" type="number" />
+                <instance-variable name="Activate" sid="120999645217907" type="string" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>

@@ -308,6 +308,7 @@
                     <instance-variables>
                         <activated>false</activated>
                         <timeToActivate>1</timeToActivate>
+                        <Activate>activateFireball</Activate>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -355,6 +356,7 @@
                     <instance-variables>
                         <activated>false</activated>
                         <timeToActivate>1</timeToActivate>
+                        <Activate>activateFireball</Activate>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -402,6 +404,7 @@
                     <instance-variables>
                         <activated>false</activated>
                         <timeToActivate>1</timeToActivate>
+                        <Activate>activateFireball</Activate>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -436,6 +439,34 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scythe" uid="22">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>0</timeToActivate>
+                        <Activate></Activate>
+                        <endAngle>60</endAngle>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1881</x>
+                        <y>18</y>
+                        <z>0</z>
+                        <width>59</width>
+                        <height>275</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.004</hotspotY>
+                        <angle>-1.03484416</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -490,8 +521,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>75</x>
-                        <y>566</y>
+                        <x>122</x>
+                        <y>519</y>
                         <z>0</z>
                         <width>108.376800537</width>
                         <height>108.376800537</height>
