@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Lv01</name>
+    <events>
+        <variable constant="0" name="TutoTrigger1" sid="167064539634093" static="0" type="number">0</variable>
+        <variable constant="0" name="MiauTrigger1" sid="500135797722087" static="0" type="number">0</variable>
+        <include>Game</include>
+        <event-block sid="768486088224444">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="227121003308232" type="player">
+                    <param id="0" name="Object">InkmiauTapTrigger1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="293895248978374" type="System">
+                    <param id="0" name="Variable">MiauTrigger1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="783119901153494" type="System">
+                    <param id="0" name="Variable">MiauTrigger1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="170715268704274" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="276777251813141" type="System">
+                    <param id="0" name="Object to create">InkMiauTapHud</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">ViewportRight(&quot;GUI&quot;) / 2</param>
+                    <param id="3" name="Y">ViewportBottom(&quot;GUI&quot;) / 2</param>
+                </action>
+                <action id="-3" name="Create object" sid="808208750118031" type="System">
+                    <param id="0" name="Object to create">InkMiauTapText1</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">InkMiauTapHud.X</param>
+                    <param id="3" name="Y">InkMiauTapHud.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="952341565316260" type="System">
+                    <param id="0" name="Object to create">tapToContinue</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">InkMiauTapHud.X</param>
+                    <param id="3" name="Y">InkMiauTapHud.Y</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="449213406531885" type="tapToContinue">
+                    <param id="0" name="Object">InkMiauTapHud</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="551232511555023">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="325848574726307" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="567379420481854" type="System">
+                    <param id="0" name="Variable">MiauTrigger1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="310704665119967" type="System">
+                    <param id="0" name="Variable">MiauTrigger1</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="158909625317463" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="623525418448991" type="InkMiauTapHud" />
+                <action behavior="Fade" id="1" name="Start fade" sid="503036150001881" type="InkMiauTapText1" />
+                <action behavior="Fade" id="1" name="Start fade" sid="936024431392810" type="tapToContinue" />
+            </actions>
+        </event-block>
+        <event-block sid="935861132453241">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="914713654992875" type="player">
+                    <param id="0" name="Object">tutoTrigger1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="652104630760568" type="System">
+                    <param id="0" name="Variable">TutoTrigger1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="805687783825386" type="System">
+                    <param id="0" name="Variable">TutoTrigger1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="770396009407179" type="System">
+                    <param id="0" name="Object to create">handTutorial</param>
+                    <param id="1" name="Layer">&quot;Traps&quot;</param>
+                    <param id="2" name="X">fireball.X+50</param>
+                    <param id="3" name="Y">fireball.Y+50</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="667506947676440" type="fireball">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="509953699969639" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="522230802612810" type="System">
+                    <param id="0" name="Object">handTutorial</param>
+                    <param id="1" name="Time scale">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="334037640468492">
+            <conditions>
+                <condition id="17" name="On tap object" sid="482319944582679" type="Touch">
+                    <param id="0" name="Object">fireball</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="162480834668261" type="System">
+                    <param id="0" name="Variable">TutoTrigger1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="764951923510768" type="System">
+                    <param id="0" name="Variable">TutoTrigger1</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="853385433936275" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="495246302911965" type="handTutorial" />
+            </actions>
+        </event-block>
+        <event-block sid="257080189329845">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="364433772054986" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="843347971310476" type="fireball">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

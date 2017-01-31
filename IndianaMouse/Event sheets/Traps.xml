@@ -11,6 +11,9 @@
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="884887509580910" type="Trap">
                     <param id="0" name="Instance variable">activated</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="861170024735732" type="Trap">
+                    <param id="0" name="Instance variable">enabled</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-13" name="Set boolean" sid="964906346354661" type="Trap">

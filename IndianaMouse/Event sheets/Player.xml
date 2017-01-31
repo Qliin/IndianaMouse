@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player</name>
     <events>
-        <include>Traps</include>
         <event-block sid="380850622662890">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="423961838799242" type="System" />
@@ -57,12 +56,6 @@
                 <action id="-12" name="Subtract from" sid="789897272475961" type="player">
                     <param id="0" name="Instance variable">life</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action disabled="1" id="-1" name="Set X" sid="468822882567151" type="player">
-                    <param id="0" name="X">player.currentRespawnX</param>
-                </action>
-                <action disabled="1" id="-2" name="Set Y" sid="587665151020353" type="player">
-                    <param id="0" name="Y">player.currentRespawnY</param>
                 </action>
                 <action behavior="Flash" id="0" name="Flash" sid="669803633319568" type="player">
                     <param id="0" name="&apos;On&apos; time">0.1</param>

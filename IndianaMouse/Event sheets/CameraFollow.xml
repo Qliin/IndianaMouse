@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CameraFollow</name>
+    <events>
+        <variable constant="0" name="cameraOffset" sid="769819780421233" static="0" type="number">600</variable>
+        <event-block sid="568434290906782">
+            <conditions>
+                <condition id="-18" name="On created" sid="384078669617438" type="player" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="985358378166143" type="System">
+                    <param id="0" name="Object to create">camera</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">player.X + cameraOffset</param>
+                    <param id="3" name="Y">player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="285269757347010">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="669977486459078" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="236544642552972" type="camera">
+                    <param id="0" name="X">lerp(Self.X, player.X + cameraOffset, 0.05)</param>
+                    <param id="1" name="Y">lerp(Self.Y, player.Y, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -17,10 +17,11 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
-        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -77,9 +78,6 @@
                 </behavior-type>
                 <behavior-type name="BoundToLayout" sid="935150052318269">
                     <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="626025230497236">
-                    <behavior id="scrollto" />
                 </behavior-type>
                 <behavior-type name="Flash" sid="264969773580324">
                     <behavior id="Flash" />
@@ -169,6 +167,98 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="spikes" sid="242516841891242">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959795579835425" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lava" sid="752998949929767">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994643304995254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="camera" sid="395783690043700">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="578835248737563">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="530068836329324" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InkmiauTapTrigger1" sid="516538510936489">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831775151132721" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InkMiauTapHud" sid="246225437749167">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="623780916132630">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629366327886149" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TapToContinuePoint" x="0.5" y="0.9" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="614910378361253">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="InkMiauTapText1" sid="826143784829728">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="601285401374944">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="tapToContinue" sid="407749663748812">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="946028841228925">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="tutoTrigger1" sid="192644071938404">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891911289649485" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="handTutorial" sid="767482033479919">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="509843263495715">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333890022884318" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -181,21 +271,21 @@
                 <instance-variable name="activated" sid="315417138294303" type="boolean" />
                 <instance-variable name="timeToActivate" sid="262698966508429" type="number" />
                 <instance-variable name="Activate" sid="120999645217907" type="string" />
+                <instance-variable name="enabled" sid="388766003812608" type="boolean" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="DestroyOutsideLayout" sid="721966340252776">
-                    <behavior id="destroy" />
-                </behavior-type>
-            </behaviors>
         </family>
     </families>
     <layout-folder>
-        <layout>Main.xml</layout>
+        <layout>Lv01.xml</layout>
         <layout>Objects.xml</layout>
+        <layout>GUI.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Player.xml</event-sheet>
         <event-sheet>Traps.xml</event-sheet>
+        <event-sheet>CameraFollow.xml</event-sheet>
+        <event-sheet>Game.xml</event-sheet>
+        <event-sheet>Lv01.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">
