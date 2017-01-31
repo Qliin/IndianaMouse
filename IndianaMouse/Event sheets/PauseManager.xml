@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PauseManager</name>
+    <events>
+        <variable comment="0 = false; 1 = true; " constant="0" name="isPause" sid="922051849769458" static="0" type="number">0</variable>
+        <event-block sid="923841402509692">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="326097405392784" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="116762011043482" type="System">
+                    <param id="0" name="Object to create">pause</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">ViewportRight(&quot;GUI&quot;) -100</param>
+                    <param id="3" name="Y">ViewportTop(&quot;GUI&quot;) +50</param>
+                </action>
+                <action id="-3" name="Create object" sid="303811036065649" type="System">
+                    <param id="0" name="Object to create">continue</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">ViewportRight(&quot;GUI&quot;) / 2</param>
+                    <param id="3" name="Y">ViewportBottom(&quot;GUI&quot;) / 2</param>
+                </action>
+                <action id="-3" name="Create object" sid="170170348193738" type="System">
+                    <param id="0" name="Object to create">pauseHudTxt</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">(ViewportRight(&quot;GUI&quot;) / 3) + 15</param>
+                    <param id="3" name="Y">(ViewportBottom(&quot;GUI&quot;) / 4) + 15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="801317818818140">
+            <conditions>
+                <condition id="3" name="On touched object" sid="291312642434640" type="Touch">
+                    <param id="0" name="Object">pause</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="148334153414677" type="pause" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="291016738332400" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="123736562738268" type="pause">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="715062237628219" type="continue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="772469491647217" type="pauseHudTxt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="820421101789628">
+            <conditions>
+                <condition id="3" name="On touched object" sid="332352732331930" type="Touch">
+                    <param id="0" name="Object">continue</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="786836301589511" type="continue" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="749278076545326" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="997833730666477" type="pause">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="756753856853845" type="continue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="140422180762526" type="pauseHudTxt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

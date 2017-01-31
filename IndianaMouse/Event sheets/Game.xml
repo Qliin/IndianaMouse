@@ -6,5 +6,6 @@
         <include>Traps</include>
         <include>Player</include>
         <include>CameraFollow</include>
+        <include>PauseManager</include>
     </events>
 </c2eventsheet>
