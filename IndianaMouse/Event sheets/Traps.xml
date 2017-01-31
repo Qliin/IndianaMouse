@@ -133,30 +133,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-20" name="Rotate toward angle" sid="162076819548460" type="scythe">
-                            <param id="0" name="Degrees">3</param>
-                            <param id="1" name="Angle">scythe.endAngle</param>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="381361150484246" type="scythe">
+                            <param id="0" name="Target is">2</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">60</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="653236785337542" type="scythe">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="108145473622999">
-                            <conditions>
-                                <condition id="-11" inverted="1" name="Is within angle" sid="722711011148946" type="scythe">
-                                    <param id="0" name="Within">0.5</param>
-                                    <param id="1" name="Angle">scythe.endAngle</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="611050147513086" type="System">
-                                    <param id="0" name="Seconds">0.01</param>
-                                </action>
-                                <action id="0" name="Call function" sid="983759051645957" type="Function">
-                                    <param id="0" name="Name">&quot;ActivateScythe&quot;</param>
-                                    <param id="1" name="Parameter {n}">scythe.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -198,6 +184,58 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="891443285578877">
+            <conditions>
+                <condition id="0" name="On function" sid="154704513223043" type="Function">
+                    <param id="0" name="Name">&quot;ActivateSpears&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="380041029398113">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="644815340568055" type="spearContraption">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="822390658125053">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="184650781893353" type="System">
+                                    <param id="0" name="Count">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="589736708052682" type="System">
+                                    <param id="0" name="Object to create">spear</param>
+                                    <param id="1" name="Layer">&quot;LevelLayout&quot;</param>
+                                    <param id="2" name="X">spearContraption.ImagePointX(&quot;spear&quot;&amp;loopindex + 1)</param>
+                                    <param id="3" name="Y">spearContraption.ImagePointY(&quot;spear&quot;&amp;loopindex + 1)</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="350739187705787" type="spear" />
+                                <action behavior="LiteTween" id="3" name="Set target" sid="945388388374577" type="spear">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">Self.Y - 70</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="813579583060669" type="spear">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">Self.X</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="121172490631596" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="105690541934672" type="spear">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="237353535511253">
             <conditions>
                 <condition id="0" name="On function" sid="213128679957887" type="Function">
@@ -213,9 +251,19 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-23" name="Move at angle" sid="348133040211279" type="quickLitter">
-                            <param id="0" name="Angle">270</param>
-                            <param id="1" name="Distance">50</param>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="219170744131637" type="quickLitter">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="299481896486220" type="quickLitter">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.Y-50</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="957706601835005" type="quickLitter">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -236,9 +284,19 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-23" name="Move at angle" sid="996906425602346" type="spring">
-                            <param id="0" name="Angle">270</param>
-                            <param id="1" name="Distance">50</param>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="812325670216329" type="spring">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="856034132992877" type="spring">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.Y-50</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="544339311860398" type="spring">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="382243821155287" type="System">
                             <param id="0" name="Seconds">0.1</param>
@@ -265,15 +323,29 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-23" name="Move at angle" sid="331626643312333" type="cheese">
-                            <param id="0" name="Angle">270</param>
-                            <param id="1" name="Distance">50</param>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="216311423722008" type="cheese">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
                         </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="186963861481337" type="cheese">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.Y-50</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="890263694428417" type="cheese">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="553936771157449" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="745040961377265" type="cheese" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <comment>Disable arrows when they touch ground</comment>
+        <comment>Disable arrows when they touch the ground</comment>
         <event-block any="1" sid="721545678319245">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="699500622844602" type="arrow">
