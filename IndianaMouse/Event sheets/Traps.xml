@@ -134,7 +134,7 @@
                     </conditions>
                     <actions>
                         <action id="-20" name="Rotate toward angle" sid="162076819548460" type="scythe">
-                            <param id="0" name="Degrees">2</param>
+                            <param id="0" name="Degrees">3</param>
                             <param id="1" name="Angle">scythe.endAngle</param>
                         </action>
                     </actions>
@@ -163,27 +163,131 @@
         <event-block sid="871275715320735">
             <conditions>
                 <condition id="0" name="On function" sid="696290799792741" type="Function">
-                    <param id="0" name="Name">&quot;ActivateArrow&quot;</param>
+                    <param id="0" name="Name">&quot;ActivateArrows&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="721414375903720">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="731386315403269" type="arrow">
+                        <condition id="-14" name="Pick by unique ID" sid="731386315403269" type="arrowDispenser">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="543582431649912">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="720829578176216" type="System">
+                                    <param id="0" name="Count">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="593624383956769" type="System">
+                                    <param id="0" name="Object to create">arrow</param>
+                                    <param id="1" name="Layer">&quot;Traps&quot;</param>
+                                    <param id="2" name="X">arrowDispenser.ImagePointX(&quot;arrow&quot;&amp;loopindex + 1)</param>
+                                    <param id="3" name="Y">arrowDispenser.ImagePointY(&quot;arrow&quot;&amp;loopindex + 1)</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="282117757543688" type="arrow">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="237353535511253">
+            <conditions>
+                <condition id="0" name="On function" sid="213128679957887" type="Function">
+                    <param id="0" name="Name">&quot;ActivateLitter&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="162539317352516">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="639172256139257" type="quickLitter">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="282117757543688" type="arrow">
+                        <action id="-23" name="Move at angle" sid="348133040211279" type="quickLitter">
                             <param id="0" name="Angle">270</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="651365475248730" type="arrow">
-                            <param id="0" name="State">1</param>
+                            <param id="1" name="Distance">50</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="411334800511399">
+            <conditions>
+                <condition id="0" name="On function" sid="544366566515288" type="Function">
+                    <param id="0" name="Name">&quot;ActivateSpring&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="938724103645783">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="174871509598992" type="spring">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="996906425602346" type="spring">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">50</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="382243821155287" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="184754518738118" type="spring">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="906523222797032">
+            <conditions>
+                <condition id="0" name="On function" sid="452287531930563" type="Function">
+                    <param id="0" name="Name">&quot;ActivateCheese&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="922092972284891">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="719090090603723" type="cheese">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="331626643312333" type="cheese">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Disable arrows when they touch ground</comment>
+        <event-block any="1" sid="721545678319245">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="699500622844602" type="arrow">
+                    <param id="0" name="Object">bounds</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="617189555241585" type="arrow">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="496333332415730" type="arrow">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

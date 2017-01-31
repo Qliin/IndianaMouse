@@ -46,56 +46,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="848411165586863">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="128598684221898" type="player">
-                    <param id="0" name="Object">Trap</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="789897272475961" type="player">
-                    <param id="0" name="Instance variable">life</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="669803633319568" type="player">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">0.5</param>
-                </action>
-                <action id="-9" name="Destroy" sid="894931912783627" type="Trap" />
-            </actions>
-            <sub-events>
-                <event-block sid="233974861926803">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="707239665034668" type="player">
-                            <param id="0" name="Instance variable">life</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-26" name="Restart layout" sid="255944769055143" type="System" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="440774517426403">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="202373563886375" type="player">
-                    <param id="0" name="Object">respawnPoint</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="477804013087893" type="player">
-                    <param id="0" name="Instance variable">currentRespawnX</param>
-                    <param id="1" name="Value">respawnPoint.X</param>
-                </action>
-                <action id="-10" name="Set value" sid="241573033375152" type="player">
-                    <param id="0" name="Instance variable">currentRespawnY</param>
-                    <param id="1" name="Value">respawnPoint.Y</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="558575112772410">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="439155889379402" type="player">
@@ -103,8 +53,114 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-21" name="Reset global variables" sid="735880237407851" type="System" />
                 <action id="-26" name="Restart layout" sid="797981613561631" type="System" />
             </actions>
         </event-block>
+        <event-block sid="834879109567476">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="227473223189215" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="576294704469310" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="467603490120076">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="203427779281678" type="Keyboard">
+                    <param id="0" name="Key">67 (C)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="444651119965189" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="618132806386937" title="Collisions with Traps">
+            <sub-events>
+                <event-block sid="848411165586863">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="128598684221898" type="player">
+                            <param id="0" name="Object">Trap</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="204081253075530" type="Trap">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dmg&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="789897272475961" type="player">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="669803633319568" type="player">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="894931912783627" type="Trap" />
+                    </actions>
+                </event-block>
+                <event-block sid="559721246658755">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="436965316108670" type="player">
+                            <param id="0" name="Object">quickLitter</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="864704702268228" type="player">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="721138192834934">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="930054126576730" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="848475291963488" type="player">
+                            <param id="0" name="Max Speed">330</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="351943078654939">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="264330639039711" type="player">
+                            <param id="0" name="Object">spring</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="631600737603977" type="player">
+                            <param id="0" name="Vector Y">-1700</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121171426730361">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="418638038342001" type="player">
+                            <param id="0" name="Object">cheese</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="838881605252930" type="cheese" />
+                        <action behavior="Platform" id="11" name="Set enabled" sid="875946926225525" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="518089828913533" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="278381258380281" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -10,12 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Lv01</layout>
-        <layout order="5">Objects</layout>
-        <event-sheet order="1">Player</event-sheet>
+        <layout active="1" order="1">Traps(Tests)</layout>
+        <layout order="3">Objects</layout>
+        <event-sheet order="0">Player</event-sheet>
         <event-sheet order="2">Traps</event-sheet>
-        <event-sheet order="3">CameraFollow</event-sheet>
-        <event-sheet order="4">Lv01</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,14 +25,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="Trap" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/ground/" />
+        <folder expanded="1" path="animation-folder/bounds/" />
         <folder expanded="1" path="animation-folder/player/" />
         <folder expanded="1" path="animation-folder/fireball/" />
         <folder expanded="1" path="animation-folder/exit/" />
@@ -46,9 +44,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spikes/" />
         <folder expanded="1" path="animation-folder/lava/" />
         <folder expanded="1" path="animation-folder/camera/" />
-        <folder expanded="1" path="animation-folder/InkmiauTapTrigger1/" />
-        <folder expanded="1" path="animation-folder/InkMiauTapHud/" />
+        <folder expanded="1" path="animation-folder/ImeowTapTrigger1/" />
+        <folder expanded="1" path="animation-folder/ImeowtapHud/" />
         <folder expanded="1" path="animation-folder/tutoTrigger1/" />
         <folder expanded="1" path="animation-folder/handTutorial/" />
+        <folder expanded="1" path="animation-folder/arrowDispenser/" />
+        <folder expanded="1" path="animation-folder/quickLitter/" />
+        <folder expanded="1" path="animation-folder/spring/" />
+        <folder expanded="1" path="animation-folder/cheese/" />
     </folders-expanded>
 </c2uistate>

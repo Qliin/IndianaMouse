@@ -66,38 +66,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>147</x>
-                        <y>151</y>
+                        <x>119</x>
+                        <y>137</y>
                         <z>0</z>
                         <width>60</width>
                         <height>100</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="trapTime" uid="17">
-                    <properties>
-                        <text>0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>364.995605469</x>
-                        <y>67.575187683</y>
-                        <z>0</z>
-                        <width>56.991230011</width>
-                        <height>48.849624634</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -114,9 +87,10 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>1</timeToActivate>
+                        <timeToActivate>0.5</timeToActivate>
                         <Activate>ActivateFireball</Activate>
                         <enabled>true</enabled>
+                        <type>dmg</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -133,15 +107,20 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>507</x>
-                        <y>323</y>
+                        <x>414</x>
+                        <y>677</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>102</width>
+                        <height>102</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -158,29 +137,30 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>1.5</timeToActivate>
+                        <timeToActivate>1</timeToActivate>
                         <Activate>ActivateScythe</Activate>
                         <enabled>true</enabled>
+                        <type>dmg</type>
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>486</x>
-                        <y>472</y>
+                        <x>566</x>
+                        <y>589</y>
                         <z>0</z>
                         <width>59</width>
                         <height>275</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.004</hotspotY>
-                        <angle>0</angle>
+                        <angle>-1.047197819</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="camera" uid="14">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -195,8 +175,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>191</x>
-                        <y>415</y>
+                        <x>129</x>
+                        <y>365</y>
                         <z>0</z>
                         <width>123.935470581</width>
                         <height>123.935470581</height>
@@ -232,11 +212,184 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>989</x>
-                        <y>222</y>
+                        <x>430</x>
+                        <y>147</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrow" uid="51">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>true</activated>
+                        <timeToActivate>1</timeToActivate>
+                        <Activate>ActivateFireball</Activate>
+                        <enabled>true</enabled>
+                        <type>dmg</type>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>1000</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>920</x>
+                        <y>700</y>
+                        <z>0</z>
+                        <width>10</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrowDispenser" uid="52">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>1.5</timeToActivate>
+                        <Activate>ActivateArrows</Activate>
+                        <enabled>true</enabled>
+                        <type>dazz</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1017</x>
+                        <y>611</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="quickLitter" uid="54">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>1.5</timeToActivate>
+                        <Activate>ActivateLitter</Activate>
+                        <enabled>true</enabled>
+                        <type>dazz</type>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>155</x>
+                        <y>680</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spring" uid="50">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>0.5</timeToActivate>
+                        <Activate>ActivateSpring</Activate>
+                        <enabled>true</enabled>
+                        <type>dazz</type>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1289</x>
+                        <y>724</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="cheese" uid="60">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>0.5</timeToActivate>
+                        <Activate>ActivateCheese</Activate>
+                        <enabled>true</enabled>
+                        <type>dazz</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1454</x>
+                        <y>692</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -11,8 +11,10 @@
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -22,6 +24,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -52,7 +55,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="ground" sid="693706564613060">
+        <object-type name="bounds" sid="693706564613060">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="296203161520742">
@@ -94,6 +97,9 @@
             <behaviors>
                 <behavior-type name="Platform" sid="943067707839619">
                     <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="653926229562448">
+                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -163,7 +169,14 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373988820893384" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.7625" />
+                            <point x="1" y="0.7625" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -196,7 +209,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="InkmiauTapTrigger1" sid="516538510936489">
+        <object-type name="ImeowTapTrigger1" sid="516538510936489">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831775151132721" speed="5">
@@ -204,7 +217,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="InkMiauTapHud" sid="246225437749167">
+        <object-type name="ImeowtapHud" sid="246225437749167">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Fade" sid="623780916132630">
@@ -222,7 +235,7 @@
         <object-type name="Text" sid="614910378361253">
             <plugin id="Text" />
         </object-type>
-        <object-type name="InkMiauTapText1" sid="826143784829728">
+        <object-type name="ImeowtapText1" sid="826143784829728">
             <plugin id="Text" />
             <behaviors>
                 <behavior-type name="Fade" sid="601285401374944">
@@ -259,26 +272,93 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="arrowDispenser" sid="207534490719292">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552759045863363" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="arrow1" x="0.24" y="0.5" />
+                        <image-point name="arrow2" x="0.42" y="0.5" />
+                        <image-point name="arrow3" x="0.58" y="0.5" />
+                        <image-point name="arrow4" x="0.76" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="quickLitter" sid="793278556473396">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="727869138072124">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454062573748029" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="359491295056899">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="spring" sid="620016004944885">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="612791691556252">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="433151502537759" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cheese" sid="222285295776980">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="906477283107407" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Lv01_map" sid="527516562151526">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="937401882084851">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\emanu_000\Documents\GIT\IndianaMouse\TiledMaps\../../../../Downloads/tileset_teste.png" />
+            <tiles />
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
             <members>
                 <member>arrow</member>
+                <member>arrowDispenser</member>
+                <member>cheese</member>
                 <member>fireball</member>
+                <member>quickLitter</member>
                 <member>scythe</member>
+                <member>spring</member>
             </members>
             <instance-variables>
                 <instance-variable name="activated" sid="315417138294303" type="boolean" />
                 <instance-variable name="timeToActivate" sid="262698966508429" type="number" />
                 <instance-variable name="Activate" sid="120999645217907" type="string" />
                 <instance-variable name="enabled" sid="388766003812608" type="boolean" />
+                <instance-variable comment="dmg or dazz" name="type" sid="978900903784955" type="string" />
             </instance-variables>
         </family>
     </families>
     <layout-folder>
         <layout>Lv01.xml</layout>
+        <layout>Lv02.xml</layout>
         <layout>Objects.xml</layout>
         <layout>GUI.xml</layout>
+        <layout>Traps(Tests).xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Player.xml</event-sheet>
@@ -294,6 +374,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="15" />
+        <global-instance type="Keyboard" uid="56" />
     </global-instances>
     <sounds-folder />
     <music-folder />
