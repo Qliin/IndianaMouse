@@ -165,7 +165,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                      <instance type="pause" uid="26">
+                <instance type="pause" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -187,7 +187,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="continue" uid="8">
+                <instance type="continue" uid="10">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -209,7 +209,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pauseHudTxt" uid="27">
+                <instance type="pauseHudTxt" uid="15">
                     <properties>
                         <text>Pause</text>
                         <initial-visibility>Invisible</initial-visibility>

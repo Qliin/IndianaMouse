@@ -386,7 +386,17 @@
         </object-type>
         <object-type name="pauseHudTxt" sid="625041841726972">
             <plugin id="Text" />
-        </object-type>        
+        </object-type>
+        <object-type name="Lv04_map" sid="645380658964804">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="278335720792754">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\tileset_teste.png" />
+            <tiles />
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -413,6 +423,7 @@
     <layout-folder>
         <layout>Lv01.xml</layout>
         <layout>Lv02.xml</layout>
+        <layout>Lv04.xml</layout>
         <layout>Objects.xml</layout>
         <layout>GUI.xml</layout>
         <layout>Traps(Tests).xml</layout>
@@ -424,15 +435,16 @@
         <event-sheet>Game.xml</event-sheet>
         <event-sheet>Lv01.xml</event-sheet>
         <event-sheet>PauseManager.xml</event-sheet>
+        <event-sheet>Lv04.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Touch" uid="9">
+        <global-instance type="Touch" uid="46">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="15" />
-        <global-instance type="Keyboard" uid="56" />
+        <global-instance type="Function" uid="56" />
+        <global-instance type="Keyboard" uid="63" />
     </global-instances>
     <sounds-folder />
     <music-folder />
