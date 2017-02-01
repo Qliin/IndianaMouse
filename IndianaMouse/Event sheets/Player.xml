@@ -57,6 +57,7 @@
                 <action id="-26" name="Restart layout" sid="797981613561631" type="System" />
             </actions>
         </event-block>
+        <comment>For Debug</comment>
         <event-block sid="834879109567476">
             <conditions>
                 <condition id="0" name="On key pressed" sid="227473223189215" type="Keyboard">

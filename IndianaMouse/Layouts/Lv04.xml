@@ -186,24 +186,34 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="lava" uid="65">
+                <instance type="catHead" uid="65">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>1.5</timeToActivate>
+                        <Activate>ActivateScythe</Activate>
+                        <enabled>true</enabled>
+                        <type>dmg</type>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>983</x>
                         <y>711</y>
                         <z>0</z>
-                        <width>237</width>
-                        <height>158</height>
+                        <width>221</width>
+                        <height>91</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502262473</hotspotX>
+                        <hotspotY>0.516483545</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -223,23 +233,19 @@
                         <type>dmg</type>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>330</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
-                                <jump-strength>1200</jump-strength>
+                                <jump-strength>650</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
+                                <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -249,8 +255,8 @@
                         <x>982</x>
                         <y>587</y>
                         <z>0</z>
-                        <width>79</width>
-                        <height>79</height>
+                        <width>64</width>
+                        <height>102</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -273,23 +279,19 @@
                         <type>dmg</type>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>330</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
-                                <jump-strength>1200</jump-strength>
+                                <jump-strength>650</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
+                                <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -299,8 +301,8 @@
                         <x>1463</x>
                         <y>712</y>
                         <z>0</z>
-                        <width>79</width>
-                        <height>79</height>
+                        <width>64</width>
+                        <height>102</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -308,24 +310,34 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lava" uid="70">
+                <instance type="catHead" uid="70">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>1.5</timeToActivate>
+                        <Activate>ActivateScythe</Activate>
+                        <enabled>true</enabled>
+                        <type>dmg</type>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1462</x>
                         <y>790</y>
                         <z>0</z>
-                        <width>79</width>
-                        <height>79</height>
+                        <width>221</width>
+                        <height>91</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502262473</hotspotX>
+                        <hotspotY>0.516483545</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -345,6 +357,7 @@
                         <type>dazz</type>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="LiteTween">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -363,11 +376,11 @@
                         <x>2410.5</x>
                         <y>553</y>
                         <z>0</z>
-                        <width>79</width>
-                        <height>79</height>
+                        <width>116</width>
+                        <height>161</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.508620679</hotspotX>
+                        <hotspotY>0.503105581</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -388,6 +401,7 @@
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="LiteTween">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -406,11 +420,11 @@
                         <x>2844</x>
                         <y>-79</y>
                         <z>0</z>
-                        <width>59</width>
-                        <height>275</height>
+                        <width>154</width>
+                        <height>185</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.004</hotspotY>
+                        <hotspotY>0.005405406</hotspotY>
                         <angle>-1.047197819</angle>
                         <opacity>1</opacity>
                     </world>
@@ -430,6 +444,7 @@
                         <type>dazz</type>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="LiteTween">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -451,8 +466,8 @@
                         <width>79</width>
                         <height>79</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.506329119</hotspotX>
+                        <hotspotY>0.506329119</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -470,11 +485,11 @@
                         <x>2095</x>
                         <y>593</y>
                         <z>0</z>
-                        <width>237</width>
-                        <height>79</height>
+                        <width>116.603996277</width>
+                        <height>64.779998779</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.504065037</hotspotX>
+                        <hotspotY>0.51219511</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -555,10 +570,10 @@
                         <x>79</x>
                         <y>474</y>
                         <z>0</z>
-                        <width>60</width>
-                        <height>100</height>
+                        <width>79</width>
+                        <height>158</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.506329119</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

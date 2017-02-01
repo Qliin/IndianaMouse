@@ -24,6 +24,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -95,16 +96,50 @@
         <object-type name="fireball" sid="587055415473060">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Platform" sid="943067707839619">
+                <behavior-type name="Platform" sid="561156742742562">
                     <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="BoundToLayout" sid="653926229562448">
-                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472527864458896" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472527864458896" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Fireball_1_traps.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Fireball_2_traps.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Fireball_3_traps.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Fireball_4_traps.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="298766880745053" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -123,7 +158,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="626109255135154" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506329" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -161,11 +196,20 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649093423596081" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.004" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.00540541" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\scythe_traps.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.987013" y="0.72973" />
+                            <point x="0.649351" y="1" />
+                            <point x="0.331169" y="0.983784" />
+                            <point x="0.0324675" y="0.743243" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="arrow" sid="902896096073996">
+        <object-type name="arrows" sid="902896096073996">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Bullet" sid="394253580945252">
@@ -174,10 +218,10 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373988820893384" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Arrows_traps.png">
                         <collision-poly>
-                            <point x="0" y="0.7625" />
-                            <point x="1" y="0.7625" />
+                            <point x="0" y="0.598321" />
+                            <point x="1" y="0.598321" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
@@ -189,15 +233,31 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959795579835425" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504065" hotspotY="0.512195" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Espinhos_traps.png">
+                        <collision-poly>
+                            <point x="0.146341" y="0.439024" />
+                            <point x="0.495935" y="0.170732" />
+                            <point x="0.886179" y="0.341463" />
+                            <point x="0.943089" y="0.487805" />
+                            <point x="1" y="1" />
+                            <point x="0.495935" y="1" />
+                            <point x="0.0162602" y="0.951219" />
+                            <point x="0.0650406" y="0.487805" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="lava" sid="752998949929767">
+        <object-type name="catHead" sid="752998949929767">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994643304995254" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="994643304995254" speed="0">
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.516484" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Cathead_1_traps.png" />
+                </animation>
+                <animation framecount="3" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="777670811662625" speed="10">
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.516484" />
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.516484" />
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.516484" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -281,11 +341,11 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552759045863363" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="arrow1" x="0.24" y="0.5" />
-                        <image-point name="arrow2" x="0.42" y="0.5" />
-                        <image-point name="arrow3" x="0.58" y="0.5" />
-                        <image-point name="arrow4" x="0.76" y="0.5" />
+                    <frame duration="1" hotspotX="0.503937" hotspotY="0.536585" original-source="C:\Users\emanu_000\Downloads\Arrows_base_traps.png">
+                        <image-point name="arrow1" x="0.23622" y="0.536585" />
+                        <image-point name="arrow2" x="0.417323" y="0.536585" />
+                        <image-point name="arrow3" x="0.582677" y="0.536585" />
+                        <image-point name="arrow4" x="0.76378" y="0.536585" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -299,7 +359,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454062573748029" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506787" hotspotY="0.506494" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\quicksand_traps.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -314,8 +374,49 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="433151502537759" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="433151502537759" speed="0">
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.503106" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mola_1_traps.png">
+                        <collision-poly>
+                            <point x="0" y="0.546584" />
+                            <point x="1" y="0.546584" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Spring" pingpong="0" repeatcount="1" repeatto="0" sid="553838023350492" speed="20">
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.503106">
+                        <collision-poly>
+                            <point x="0" y="0.645963" />
+                            <point x="1" y="0.645963" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.503106">
+                        <collision-poly>
+                            <point x="0" y="0.543478" />
+                            <point x="1" y="0.543478" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.503106">
+                        <collision-poly>
+                            <point x="0" y="0.301242" />
+                            <point x="1" y="0.299689" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.503106">
+                        <collision-poly>
+                            <point x="0" y="0.169255" />
+                            <point x="1" y="0.169255" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -328,7 +429,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="906477283107407" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506329" hotspotY="0.506329" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Cheese_traps.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -401,8 +502,9 @@
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
             <members>
-                <member>arrow</member>
                 <member>arrowDispenser</member>
+                <member>arrows</member>
+                <member>catHead</member>
                 <member>cheese</member>
                 <member>fireball</member>
                 <member>quickLitter</member>
@@ -418,6 +520,17 @@
                 <instance-variable name="enabled" sid="388766003812608" type="boolean" />
                 <instance-variable comment="dmg or dazz" name="type" sid="978900903784955" type="string" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="283574735192411">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Map" plugin-id="Tilemap" sid="854669047730884">
+            <members>
+                <member>Lv01_map</member>
+                <member>Lv04_map</member>
+            </members>
         </family>
     </families>
     <layout-folder>

@@ -106,13 +106,23 @@
             <sub-events>
                 <event-block sid="957011401843719">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="777097229227473" type="fireball">
+                        <condition id="-14" name="Pick by unique ID" sid="777097229227473" type="catHead">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="959554414393795" type="fireball">
-                            <param id="0" name="Control">2</param>
+                        <action id="4" name="Set animation" sid="766630978230577" type="catHead">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="135470341450685" type="System">
+                            <param id="0" name="Object to create">fireball</param>
+                            <param id="1" name="Layer">&quot;Traps&quot;</param>
+                            <param id="2" name="X">catHead.X-50</param>
+                            <param id="3" name="Y">catHead.Y</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="563822487037544" type="fireball">
+                            <param id="0" name="Vector Y">-1000</param>
                         </action>
                     </actions>
                 </event-block>
@@ -160,27 +170,17 @@
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="543582431649912">
-                            <conditions>
-                                <condition id="-12" name="Repeat" sid="720829578176216" type="System">
-                                    <param id="0" name="Count">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="593624383956769" type="System">
-                                    <param id="0" name="Object to create">arrow</param>
-                                    <param id="1" name="Layer">&quot;Traps&quot;</param>
-                                    <param id="2" name="X">arrowDispenser.ImagePointX(&quot;arrow&quot;&amp;loopindex + 1)</param>
-                                    <param id="3" name="Y">arrowDispenser.ImagePointY(&quot;arrow&quot;&amp;loopindex + 1)</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="282117757543688" type="arrow">
-                                    <param id="0" name="Angle">90</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-3" name="Create object" sid="593624383956769" type="System">
+                            <param id="0" name="Object to create">arrows</param>
+                            <param id="1" name="Layer">&quot;Traps&quot;</param>
+                            <param id="2" name="X">arrowDispenser.X</param>
+                            <param id="3" name="Y">arrowDispenser.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="282117757543688" type="arrows">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
@@ -259,7 +259,7 @@
                         <action behavior="LiteTween" id="3" name="Set target" sid="299481896486220" type="quickLitter">
                             <param id="0" name="Target is">1</param>
                             <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">Self.Y-50</param>
+                            <param id="2" name="Value">Self.Y-79</param>
                         </action>
                         <action behavior="LiteTween" id="10" name="Start" sid="957706601835005" type="quickLitter">
                             <param id="0" name="Start Mode">0</param>
@@ -298,6 +298,10 @@
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="320580101985772" type="spring">
+                            <param id="0" name="Animation">&quot;Spring&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="382243821155287" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
@@ -331,7 +335,7 @@
                         <action behavior="LiteTween" id="3" name="Set target" sid="186963861481337" type="cheese">
                             <param id="0" name="Target is">1</param>
                             <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">Self.Y-50</param>
+                            <param id="2" name="Value">Self.Y-70</param>
                         </action>
                         <action behavior="LiteTween" id="10" name="Start" sid="890263694428417" type="cheese">
                             <param id="0" name="Start Mode">0</param>
@@ -348,16 +352,31 @@
         <comment>Disable arrows when they touch the ground</comment>
         <event-block any="1" sid="721545678319245">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="699500622844602" type="arrow">
+                <condition id="0" name="On collision with another object" sid="699500622844602" type="arrows">
                     <param id="0" name="Object">bounds</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="540716735585136" type="arrows">
+                    <param id="0" name="Object">Map</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="617189555241585" type="arrow">
+                <action behavior="Bullet" id="5" name="Set enabled" sid="617189555241585" type="arrows">
                     <param id="0" name="State">0</param>
                 </action>
-                <action id="11" name="Set collisions enabled" sid="496333332415730" type="arrow">
+                <action id="11" name="Set collisions enabled" sid="496333332415730" type="arrows">
                     <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Fireball specs</comment>
+        <event-block sid="207019111899322">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="631749291441043" type="fireball" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="779710175686282" type="fireball">
+                    <param id="0" name="Animation">&quot;Falling&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
