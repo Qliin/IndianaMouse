@@ -44,7 +44,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>330</max-speed>
+                                <max-speed>300</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>850</jump-strength>
@@ -88,7 +88,7 @@
                     <instance-variables>
                         <activated>true</activated>
                         <timeToActivate>0.5</timeToActivate>
-                        <Activate>ActivateFireball</Activate>
+                        <Activate></Activate>
                         <enabled>true</enabled>
                         <type>dmg</type>
                     </instance-variables>
@@ -156,8 +156,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>566</x>
-                        <y>589</y>
+                        <x>640</x>
+                        <y>571</y>
                         <z>0</z>
                         <width>154</width>
                         <height>185</height>
@@ -243,8 +243,8 @@
                     </properties>
                     <instance-variables>
                         <activated>true</activated>
-                        <timeToActivate>1</timeToActivate>
-                        <Activate>ActivateFireball</Activate>
+                        <timeToActivate>0</timeToActivate>
+                        <Activate></Activate>
                         <enabled>true</enabled>
                         <type>dmg</type>
                     </instance-variables>
@@ -264,8 +264,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1055</x>
-                        <y>658</y>
+                        <x>1050</x>
+                        <y>537</y>
                         <z>0</z>
                         <width>110</width>
                         <height>106</height>
@@ -288,7 +288,7 @@
                         <timeToActivate>1.5</timeToActivate>
                         <Activate>ActivateArrows</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -296,8 +296,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1053.074462891</x>
-                        <y>623.368408203</y>
+                        <x>1053</x>
+                        <y>440</y>
                         <z>0</z>
                         <width>127</width>
                         <height>41</height>
@@ -320,7 +320,7 @@
                         <timeToActivate>1.5</timeToActivate>
                         <Activate>ActivateLitter</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -360,10 +360,10 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>0.5</timeToActivate>
+                        <timeToActivate>1</timeToActivate>
                         <Activate>ActivateSpring</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -403,10 +403,10 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>0.5</timeToActivate>
+                        <timeToActivate>1</timeToActivate>
                         <Activate>ActivateCheese</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -425,8 +425,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1454</x>
-                        <y>692</y>
+                        <x>1441</x>
+                        <y>624</y>
                         <z>0</z>
                         <width>79</width>
                         <height>79</height>
@@ -446,10 +446,10 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>0.5</timeToActivate>
+                        <timeToActivate>1.5</timeToActivate>
                         <Activate>ActivateSpears</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -478,8 +478,8 @@
                     </properties>
                     <instance-variables>
                         <activated>true</activated>
-                        <timeToActivate>0.5</timeToActivate>
-                        <Activate>ActivateFireball</Activate>
+                        <timeToActivate>0</timeToActivate>
+                        <Activate></Activate>
                         <enabled>true</enabled>
                         <type>dmg</type>
                     </instance-variables>

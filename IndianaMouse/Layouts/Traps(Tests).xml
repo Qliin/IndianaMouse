@@ -411,10 +411,10 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>1</timeToActivate>
+                        <timeToActivate>1.5</timeToActivate>
                         <Activate>ActivateArrows</Activate>
                         <enabled>true</enabled>
-                        <type>dmg</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -446,7 +446,7 @@
                         <timeToActivate>1.5</timeToActivate>
                         <Activate>ActivateLitter</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -486,10 +486,10 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>0.5</timeToActivate>
+                        <timeToActivate>1</timeToActivate>
                         <Activate>ActivateSpring</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -529,10 +529,10 @@
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
-                        <timeToActivate>0.5</timeToActivate>
+                        <timeToActivate>1</timeToActivate>
                         <Activate>ActivateCheese</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -575,7 +575,7 @@
                         <timeToActivate>1.5</timeToActivate>
                         <Activate>ActivateSpears</Activate>
                         <enabled>true</enabled>
-                        <type>dazz</type>
+                        <type>sup</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />

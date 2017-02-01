@@ -29,12 +29,12 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ImeowtapHud" uid="19">
+                <instance type="Imeow_hud" uid="19">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Fade">
@@ -42,7 +42,7 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <fade-out-time>0.5</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -53,46 +53,8 @@
                         <x>409</x>
                         <y>275</y>
                         <z>0</z>
-                        <width>572</width>
+                        <width>800.799987793</width>
                         <height>250</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ImeowtapText1" uid="22">
-                    <properties>
-                        <text>InkmiauTap saying something</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-37,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>408</x>
-                        <y>236</y>
-                        <z>0</z>
-                        <width>515</width>
-                        <height>119</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -118,7 +80,7 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <fade-out-time>0.5</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -170,13 +132,13 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1233.5</x>
-                        <y>61</y>
+                        <x>1565</x>
+                        <y>92</y>
                         <z>0</z>
                         <width>163</width>
                         <height>70</height>
@@ -192,13 +154,13 @@
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1006.5</x>
-                        <y>361</y>
+                        <x>1493</x>
+                        <y>248</y>
                         <z>0</z>
                         <width>413</width>
                         <height>76</height>
@@ -224,14 +186,47 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>803</x>
-                        <y>233</y>
+                        <x>1337</x>
+                        <y>313</y>
                         <z>0</z>
                         <width>405</width>
                         <height>85</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Imeow_portrait" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>717</x>
+                        <y>271</y>
+                        <z>0</z>
+                        <width>146</width>
+                        <height>174</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

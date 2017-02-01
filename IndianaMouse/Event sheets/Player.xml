@@ -53,8 +53,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-21" name="Reset global variables" sid="735880237407851" type="System" />
-                <action id="-26" name="Restart layout" sid="797981613561631" type="System" />
+                <action id="-43" name="Go to next/previous layout" sid="854129110370734" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>For Debug</comment>
@@ -116,7 +117,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="1" name="Set max speed" sid="864704702268228" type="player">
-                            <param id="0" name="Max Speed">200</param>
+                            <param id="0" name="Max Speed">150</param>
                         </action>
                     </actions>
                 </event-block>
@@ -126,7 +127,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="1" name="Set max speed" sid="848475291963488" type="player">
-                            <param id="0" name="Max Speed">330</param>
+                            <param id="0" name="Max Speed">300</param>
                         </action>
                     </actions>
                 </event-block>
@@ -163,5 +164,15 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="383074829791272">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="664575421486648" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="167663561939177" type="System">
+                    <param id="0" name="Tag">&quot;screenTouched&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

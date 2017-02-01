@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Imeowtap</name>
+    <events>
+        <event-block sid="868644690048329">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="214329910619633" type="player">
+                    <param id="0" name="Object">Imeow_trigger</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="943609551238482" type="Imeow_trigger">
+                    <param id="0" name="Instance variable">triggered</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="278187228195758" type="Imeow_txt">
+                    <param id="0" name="Unique ID">Imeow_trigger.textUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="230701437245565" type="Imeow_trigger">
+                    <param id="0" name="Instance variable">triggered</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="322293402914840" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="271076696880555" type="System">
+                    <param id="0" name="Object to create">Imeow_hud</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">ViewportRight(&quot;GUI&quot;) / 2</param>
+                    <param id="3" name="Y">ViewportBottom(&quot;GUI&quot;) / 2</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="374165123072028" type="Imeow_portrait">
+                    <param id="0" name="Object">Imeow_hud</param>
+                    <param id="1" name="Image point (optional)">2</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="533752517597195" type="System">
+                    <param id="0" name="Object">Imeow_portrait</param>
+                    <param id="1" name="Time scale">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="946050728477849" type="System">
+                    <param id="0" name="Object to create">tapToContinue</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">Imeow_hud.X</param>
+                    <param id="3" name="Y">Imeow_hud.Y</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="362917926376914" type="tapToContinue">
+                    <param id="0" name="Object">Imeow_hud</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="926355198904310" type="Imeow_txt">
+                    <param id="0" name="X">Imeow_hud.X-80</param>
+                    <param id="1" name="Y">Imeow_hud.Y</param>
+                </action>
+                <action id="-24" name="Move to top" sid="869208019738398" type="Imeow_txt" />
+            </actions>
+            <sub-events>
+                <event-block sid="137770100192720">
+                    <conditions />
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="448636896359020" type="System">
+                            <param id="0" name="Tag">&quot;screenTouched&quot;</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="857220131886363" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="472133478815311" type="Imeow_hud" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="302454626181580" type="Imeow_txt" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="390971360291434" type="tapToContinue" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="461386744896594" type="Imeow_portrait" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -10,12 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Traps(Tests)</layout>
+        <layout order="1">Traps(Tests)</layout>
         <layout order="3">Objects</layout>
-        <layout order="4">Lv01</layout>
-        <event-sheet order="0">Player</event-sheet>
+        <layout order="4">Lv02</layout>
+        <layout order="5">Lv01</layout>
+        <event-sheet active="1" order="0">Player</event-sheet>
         <event-sheet order="2">Traps</event-sheet>
-        <event-sheet order="5">Lv01</event-sheet>
+        <event-sheet order="6">Lv01</event-sheet>
+        <event-sheet order="7">Game</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,41 +25,45 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="Trap" />
         <family expanded="0" name="Map" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Traps/" />
+        <folder expanded="0" path="object-folder/Maps/" />
+        <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/arrowDispenser/" />
+        <folder expanded="1" path="animation-folder/arrows/" />
+        <folder expanded="1" path="animation-folder/catHead/" />
+        <folder expanded="1" path="animation-folder/cheese/" />
+        <folder expanded="1" path="animation-folder/fireball/" />
+        <folder expanded="1" path="animation-folder/quickLitter/" />
+        <folder expanded="1" path="animation-folder/spring/" />
+        <folder expanded="1" path="animation-folder/scythe/" />
+        <folder expanded="1" path="animation-folder/spear/" />
+        <folder expanded="1" path="animation-folder/spearContraption/" />
+        <folder expanded="1" path="animation-folder/spikes/" />
         <folder expanded="1" path="animation-folder/bounds/" />
         <folder expanded="1" path="animation-folder/player/" />
-        <folder expanded="1" path="animation-folder/fireball/" />
         <folder expanded="1" path="animation-folder/exit/" />
         <folder expanded="1" path="animation-folder/initialRespawnPoint/" />
         <folder expanded="1" path="animation-folder/jumpPoint/" />
         <folder expanded="1" path="animation-folder/respawnPoint/" />
-        <folder expanded="1" path="animation-folder/scythe/" />
-        <folder expanded="1" path="animation-folder/arrows/" />
-        <folder expanded="1" path="animation-folder/spikes/" />
-        <folder expanded="1" path="animation-folder/catHead/" />
         <folder expanded="1" path="animation-folder/camera/" />
-        <folder expanded="1" path="animation-folder/ImeowTapTrigger1/" />
-        <folder expanded="1" path="animation-folder/ImeowtapHud/" />
-        <folder expanded="1" path="animation-folder/tutoTrigger1/" />
+        <folder expanded="1" path="animation-folder/Imeow_trigger/" />
+        <folder expanded="1" path="animation-folder/Imeow_hud/" />
+        <folder expanded="1" path="animation-folder/trapTrigger/" />
         <folder expanded="1" path="animation-folder/handTutorial/" />
-        <folder expanded="1" path="animation-folder/arrowDispenser/" />
-        <folder expanded="1" path="animation-folder/quickLitter/" />
-        <folder expanded="1" path="animation-folder/spring/" />
-        <folder expanded="1" path="animation-folder/cheese/" />
-        <folder expanded="1" path="animation-folder/spearContraption/" />
-        <folder expanded="1" path="animation-folder/spear/" />
         <folder expanded="1" path="animation-folder/pause/" />
         <folder expanded="1" path="animation-folder/continue/" />
+        <folder expanded="1" path="animation-folder/Imeow_portrait/" />
     </folders-expanded>
 </c2uistate>
