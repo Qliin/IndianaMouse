@@ -48,7 +48,7 @@
                     <param id="1" name="Image point (optional)">1</param>
                 </action>
                 <action id="-3" name="Set position" sid="926355198904310" type="Imeow_txt">
-                    <param id="0" name="X">Imeow_hud.X-80</param>
+                    <param id="0" name="X">Imeow_hud.X-50</param>
                     <param id="1" name="Y">Imeow_hud.Y</param>
                 </action>
                 <action id="-24" name="Move to top" sid="869208019738398" type="Imeow_txt" />

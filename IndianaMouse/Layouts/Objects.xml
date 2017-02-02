@@ -102,8 +102,8 @@
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
+                                <gravity>2000</gravity>
+                                <max-fall-speed>2000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -221,6 +221,15 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -285,7 +294,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <activated>false</activated>
@@ -306,10 +315,10 @@
                         <y>440</y>
                         <z>0</z>
                         <width>164</width>
-                        <height>52</height>
+                        <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0.506097555</hotspotX>
-                        <hotspotY>0.538461566</hotspotY>
+                        <hotspotY>0.524999976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -349,11 +358,11 @@
                         <x>161.363708496</x>
                         <y>693.635559082</y>
                         <z>0</z>
-                        <width>237</width>
-                        <height>82</height>
+                        <width>228</width>
+                        <height>100</height>
                         <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.51219511</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.400000006</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -557,10 +566,10 @@
                         <y>571</y>
                         <z>0</z>
                         <width>221</width>
-                        <height>91</height>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.502262473</hotspotX>
-                        <hotspotY>0.516483545</hotspotY>
+                        <hotspotY>0.519999981</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

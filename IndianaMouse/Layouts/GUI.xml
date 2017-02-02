@@ -53,11 +53,11 @@
                         <x>409</x>
                         <y>275</y>
                         <z>0</z>
-                        <width>800.799987793</width>
-                        <height>250</height>
+                        <width>1254</width>
+                        <height>653</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.500765681</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

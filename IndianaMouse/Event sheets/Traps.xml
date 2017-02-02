@@ -32,7 +32,7 @@
                 <action id="-13" name="Set time scale" sid="235121918442448" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="999465533498238" type="handTutorial" />
+                <action behavior="Fade" id="1" name="Start fade" sid="999465533498238" type="handTutorial" />
                 <action id="0" name="Call function" sid="210121610423126" type="Function">
                     <param id="0" name="Name">&quot;TrapActivation&quot;</param>
                     <param id="1" name="Parameter {n}">Trap.UID{###}trapTime.UID</param>
@@ -126,7 +126,13 @@
                             <param id="3" name="Y">catHead.Y</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="563822487037544" type="fireball">
-                            <param id="0" name="Vector Y">-1300</param>
+                            <param id="0" name="Vector Y">-1500</param>
+                        </action>
+                        <action id="0" name="Play" sid="888733180044514" type="Audio">
+                            <param id="0" name="Audio file">Bola de Fogo</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;fireball&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -156,6 +162,12 @@
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
+                        <action id="0" name="Play" sid="534761308354498" type="Audio">
+                            <param id="0" name="Audio file">Foice</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;scythe&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -183,6 +195,12 @@
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="282117757543688" type="arrows">
                             <param id="0" name="Angle">arrowDispenser.arrowDirection</param>
+                        </action>
+                        <action id="0" name="Play" sid="793095112823260" type="Audio">
+                            <param id="0" name="Audio file">Flecha</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;arrow&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -263,11 +281,17 @@
                         <action behavior="LiteTween" id="3" name="Set target" sid="299481896486220" type="quickLitter">
                             <param id="0" name="Target is">1</param>
                             <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">Self.Y-79</param>
+                            <param id="2" name="Value">Self.Y-50</param>
                         </action>
                         <action behavior="LiteTween" id="10" name="Start" sid="957706601835005" type="quickLitter">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="515108266638232" type="Audio">
+                            <param id="0" name="Audio file">Areia_movediça</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;sand&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -305,6 +329,12 @@
                         <action id="4" name="Set animation" sid="320580101985772" type="spring">
                             <param id="0" name="Animation">&quot;Spring&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="201323528324259" type="Audio">
+                            <param id="0" name="Audio file">Mola</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-16" name="Wait" sid="382243821155287" type="System">
                             <param id="0" name="Seconds">0.2</param>
@@ -388,17 +418,17 @@
         <event-block sid="679933053261177">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="449810367177202" type="Indiana">
-                    <param id="0" name="Object">trapTrigger</param>
+                    <param id="0" name="Object">trap_trigger</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="443605270331556" type="trapTrigger">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="443605270331556" type="trap_trigger">
                     <param id="0" name="Instance variable">triggered</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="428772391645741" type="Trap">
-                    <param id="0" name="Unique ID">trapTrigger.target</param>
+                    <param id="0" name="Unique ID">trap_trigger.target</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="204638854311578" type="trapTrigger">
+                <action id="-13" name="Set boolean" sid="204638854311578" type="trap_trigger">
                     <param id="0" name="Instance variable">triggered</param>
                     <param id="1" name="Value">1</param>
                 </action>

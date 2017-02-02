@@ -18,5 +18,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="223116856601500">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="756916829511926" type="System" />
+                <condition id="5" inverted="1" name="Is tag playing" sid="163064376250842" type="Audio">
+                    <param id="0" name="Tag">&quot;main_theme&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="594588619889214" type="Audio">
+                    <param id="0" name="Audio file">Cartoon Battle</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;main_theme&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

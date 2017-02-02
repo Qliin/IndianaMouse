@@ -112,7 +112,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trapTrigger" uid="24">
+                <instance type="trap_trigger" uid="24">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -300,10 +300,10 @@
                         <y>902.479187012</y>
                         <z>0</z>
                         <width>221</width>
-                        <height>91</height>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.502262473</hotspotX>
-                        <hotspotY>0.516483545</hotspotY>
+                        <hotspotY>0.519999981</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -370,8 +370,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2440</x>
-                        <y>604</y>
+                        <x>79</x>
+                        <y>623</y>
                         <z>0</z>
                         <width>79</width>
                         <height>158</height>
@@ -427,10 +427,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>336.5</x>
-                        <y>-211.5</y>
+                        <x>446</x>
+                        <y>-180</y>
                         <z>0</z>
-                        <width>588</width>
+                        <width>839</width>
                         <height>210</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -465,11 +465,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>954</x>
-                        <y>-215.5</y>
+                        <x>1199</x>
+                        <y>-529</y>
                         <z>0</z>
-                        <width>575</width>
-                        <height>202</height>
+                        <width>839</width>
+                        <height>210</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -479,7 +479,7 @@
                 </instance>
                 <instance type="Imeow_txt" uid="91">
                     <properties>
-                        <text>YOU WON&apos;T ESCAPE SO EASILY. See you in the next room. HA...HAHA....HAHAHAHA!!</text>
+                        <text>YOU WON&apos;T ESCAPE SO EASILY. This is my tomb, my rules. See you in the next room. HA...HAHA....HAHAHAHA!!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
@@ -503,11 +503,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1595</x>
-                        <y>-218</y>
+                        <x>1961</x>
+                        <y>-187</y>
                         <z>0</z>
-                        <width>575</width>
-                        <height>202</height>
+                        <width>839</width>
+                        <height>210</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

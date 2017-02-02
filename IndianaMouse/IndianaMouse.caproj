@@ -10,6 +10,7 @@
     <unique-id>1zgw0yfr7bxx7</unique-id>
     <saved-with-version>24100</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -64,12 +65,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552759045863363" speed="5">
-                        <frame duration="1" hotspotX="0.506098" hotspotY="0.538462" original-source="C:\Users\emanu_000\Downloads\Arrows_base_traps.png">
-                            <image-point name="arrow1" x="0.237805" y="0.538462" />
-                            <image-point name="arrow2" x="0.414634" y="0.538462" />
-                            <image-point name="arrow3" x="0.585366" y="0.538462" />
-                            <image-point name="arrow4" x="0.762195" y="0.538462" />
-                        </frame>
+                        <frame duration="1" hotspotX="0.506098" hotspotY="0.525" original-source="C:\Users\emanu_000\Downloads\Arrows_base_traps.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -97,7 +93,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="994643304995254" speed="0">
-                        <frame duration="1" hotspotX="0.502262" hotspotY="0.516484" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Cathead_1_traps.png" />
+                        <frame duration="1" hotspotX="0.502262" hotspotY="0.52" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Cathead_1_traps.png" />
                     </animation>
                     <animation framecount="3" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="777670811662625" speed="10">
                         <frame duration="1" hotspotX="0.502262" hotspotY="0.516484" />
@@ -217,7 +213,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454062573748029" speed="5">
-                        <frame duration="1" hotspotX="0.506329" hotspotY="0.512195" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\quicksand_traps.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.4" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\quicksand_traps.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -294,7 +290,7 @@
                                 <point x="0.987013" y="0.72973" />
                                 <point x="0.649351" y="1" />
                                 <point x="0.331169" y="0.983784" />
-                                <point x="0.0324675" y="0.743243" />
+                                <point x="0" y="0.705405" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -402,9 +398,17 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629366327886149" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="TapToContinuePoint" x="0.5" y="0.9" />
-                            <image-point name="Imagepoint 2" x="0.857143" y="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500766" original-source="C:\Users\emanu_000\Downloads\info.png">
+                            <image-point name="TapToContinuePoint" x="0.5" y="0.900459" />
+                            <image-point name="Imagepoint 2" x="0.833333" y="0.500766" />
+                            <collision-poly>
+                                <point x="0.0518519" y="0.0994832" />
+                                <point x="0.499663" y="0.0348837" />
+                                <point x="0.944108" y="0.107235" />
+                                <point x="0.945455" y="0.895349" />
+                                <point x="0.499663" y="0.97416" />
+                                <point x="0.0511785" y="0.901809" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -693,7 +697,7 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="trapTrigger" sid="192644071938404">
+        <object-type name="trap_trigger" sid="192644071938404">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="triggered" sid="576202165621705" type="boolean" />
@@ -710,6 +714,9 @@
             <behaviors>
                 <behavior-type name="Sine" sid="509843263495715">
                     <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="512159215436142">
+                    <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -742,6 +749,12 @@
             <plugin id="Tilemap" />
             <texture />
             <tiles />
+        </object-type>
+        <object-type name="Audio" sid="215156067635871">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Text" sid="280479302671501">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
@@ -781,10 +794,12 @@
         </family>
     </families>
     <layout-folder>
+        <layout>MainMenu.xml</layout>
         <layout>Lv01.xml</layout>
         <layout>Lv02.xml</layout>
         <layout>Lv03.xml</layout>
         <layout>Lv04.xml</layout>
+        <layout>Credits.xml</layout>
         <layout>Objects.xml</layout>
         <layout>GUI.xml</layout>
         <layout>Traps(Tests).xml</layout>
@@ -805,9 +820,39 @@
         </global-instance>
         <global-instance type="Function" uid="56" />
         <global-instance type="Keyboard" uid="63" />
+        <global-instance type="Audio" uid="102">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="Bola de Fogo.m4a" />
+        <file name="Bola de Fogo.ogg" />
+        <file name="Areia_movediça.m4a" />
+        <file name="Areia_movediça.ogg" />
+        <file name="Flecha.m4a" />
+        <file name="Flecha.ogg" />
+        <file name="Foice.m4a" />
+        <file name="Foice.ogg" />
+        <file name="Mola.m4a" />
+        <file name="Mola.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Cartoon Battle.m4a" />
+        <file name="Cartoon Battle.ogg" />
+        <file name="Mountain Emperor.m4a" />
+        <file name="Mountain Emperor.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
