@@ -861,14 +861,14 @@
     <sounds-folder>
         <file name="Bola de Fogo.m4a" />
         <file name="Bola de Fogo.ogg" />
-        <file name="Areia_movediça.m4a" />
-        <file name="Areia_movediça.ogg" />
-        <file name="Flecha.m4a" />
-        <file name="Flecha.ogg" />
-        <file name="Foice.m4a" />
-        <file name="Foice.ogg" />
         <file name="Mola.m4a" />
         <file name="Mola.ogg" />
+        <file name="Flecha_new.m4a" />
+        <file name="Flecha_new.ogg" />
+        <file name="Foice_new.m4a" />
+        <file name="Foice_new.ogg" />
+        <file name="Areia_movediça_new.m4a" />
+        <file name="Areia_movediça_new.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Cartoon Battle.m4a" />
