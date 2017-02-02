@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StartScreen</name>
+    <events>
+        <event-block sid="438706100589176">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="795442379447577" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="487198840135292" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="529616651696611">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="700435574740116" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="669385501870436" type="Audio">
+                    <param id="0" name="Audio file">Mountain Emperor</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;start_theme&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

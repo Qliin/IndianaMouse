@@ -756,6 +756,25 @@
         <object-type name="Text" sid="280479302671501">
             <plugin id="Text" />
         </object-type>
+        <object-type name="tap_to_start" sid="317111017968909">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="start_btn" sid="867730983373172">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832304844748357" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="credits_btn" sid="375830982066908">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818126732214984" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -794,6 +813,7 @@
         </family>
     </families>
     <layout-folder>
+        <layout>StartScreen.xml</layout>
         <layout>MainMenu.xml</layout>
         <layout>Lv01.xml</layout>
         <layout>Lv02.xml</layout>
@@ -811,6 +831,9 @@
         <event-sheet>Game.xml</event-sheet>
         <event-sheet>PauseManager.xml</event-sheet>
         <event-sheet>Imeowtap.xml</event-sheet>
+        <event-sheet>StartScreen.xml</event-sheet>
+        <event-sheet>MainMenu.xml</event-sheet>
+        <event-sheet>Credits.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="46">
@@ -852,6 +875,8 @@
         <file name="Cartoon Battle.ogg" />
         <file name="Mountain Emperor.m4a" />
         <file name="Mountain Emperor.ogg" />
+        <file name="bensound-funkyelement.m4a" />
+        <file name="bensound-funkyelement.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

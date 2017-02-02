@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenu</name>
+    <events>
+        <event-block sid="636067908090188">
+            <conditions>
+                <condition id="17" name="On tap object" sid="692094018565274" type="Touch">
+                    <param id="0" name="Object">credits_btn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="931602292730114" type="Audio" />
+                <action id="-25" name="Go to layout (by name)" sid="323238653788996" type="System">
+                    <param id="0" name="Layout">&quot;Credits&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="411160168395874">
+            <conditions>
+                <condition id="17" name="On tap object" sid="961984373370379" type="Touch">
+                    <param id="0" name="Object">start_btn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="210466834852628" type="Audio" />
+                <action id="-43" name="Go to next/previous layout" sid="486877170050159" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="829458483876693">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="306424613815295" type="System" />
+                <condition id="5" inverted="1" name="Is tag playing" sid="872206658753012" type="Audio">
+                    <param id="0" name="Tag">&quot;start_theme&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="314438857565528" type="Audio">
+                    <param id="0" name="Audio file">Mountain Emperor</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;start_theme&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

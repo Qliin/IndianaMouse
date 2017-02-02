@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Credits</name>
+    <events>
+        <event-block sid="300302121811787">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="465348975794381" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="587820890290557" type="Audio" />
+                <action id="-25" name="Go to layout (by name)" sid="918410982075699" type="System">
+                    <param id="0" name="Layout">&quot;MainMenu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="869154796768505">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="151368706412112" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="415476318699187" type="Audio" />
+                <action id="0" name="Play" sid="905076258927607" type="Audio">
+                    <param id="0" name="Audio file">bensound-funkyelement</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;credit_theme&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
