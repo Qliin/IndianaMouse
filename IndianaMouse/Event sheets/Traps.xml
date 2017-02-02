@@ -126,7 +126,7 @@
                             <param id="3" name="Y">catHead.Y</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="563822487037544" type="fireball">
-                            <param id="0" name="Vector Y">-1100</param>
+                            <param id="0" name="Vector Y">-1300</param>
                         </action>
                     </actions>
                 </event-block>
@@ -182,7 +182,7 @@
                             <param id="3" name="Y">arrowDispenser.Y</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="282117757543688" type="arrows">
-                            <param id="0" name="Angle">90</param>
+                            <param id="0" name="Angle">arrowDispenser.arrowDirection</param>
                         </action>
                     </actions>
                 </event-block>
@@ -307,7 +307,7 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="382243821155287" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                            <param id="0" name="Seconds">0.2</param>
                         </action>
                         <action id="11" name="Set collisions enabled" sid="184754518738118" type="spring">
                             <param id="0" name="Collisions">0</param>
@@ -348,7 +348,7 @@
                         <action id="-16" name="Wait" sid="553936771157449" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="745040961377265" type="cheese" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="745040961377265" type="cheese" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -375,12 +375,48 @@
         <comment>Fireball specs</comment>
         <event-block sid="207019111899322">
             <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="631749291441043" type="fireball" />
+                <condition behavior="Platform" id="6" name="On fall" sid="631749291441043" type="fireball" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="779710175686282" type="fireball">
                     <param id="0" name="Animation">&quot;Falling&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="679933053261177">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="449810367177202" type="Indiana">
+                    <param id="0" name="Object">trapTrigger</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="443605270331556" type="trapTrigger">
+                    <param id="0" name="Instance variable">triggered</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="428772391645741" type="Trap">
+                    <param id="0" name="Unique ID">trapTrigger.target</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="204638854311578" type="trapTrigger">
+                    <param id="0" name="Instance variable">triggered</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="177638534932466" type="System">
+                    <param id="0" name="Object to create">handTutorial</param>
+                    <param id="1" name="Layer">&quot;Traps&quot;</param>
+                    <param id="2" name="X">Trap.X+50</param>
+                    <param id="3" name="Y">Trap.Y-50</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="111265549936651" type="Trap">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="663307620767262" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="922373615292328" type="System">
+                    <param id="0" name="Object">handTutorial</param>
+                    <param id="1" name="Time scale">1.0</param>
                 </action>
             </actions>
         </event-block>

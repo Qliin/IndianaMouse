@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="player" uid="2">
+                <instance type="Indiana" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -40,6 +40,7 @@
                         <life>3</life>
                         <currentRespawnX>0</currentRespawnX>
                         <currentRespawnY>0</currentRespawnY>
+                        <hit>false</hit>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -69,11 +70,11 @@
                         <x>119</x>
                         <y>137</y>
                         <z>0</z>
-                        <width>60</width>
-                        <height>100</height>
+                        <width>87</width>
+                        <height>109</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.505747139</hotspotX>
+                        <hotspotY>0.504587173</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -91,6 +92,7 @@
                         <Activate></Activate>
                         <enabled>true</enabled>
                         <type>dmg</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -137,6 +139,7 @@
                         <Activate>ActivateScythe</Activate>
                         <enabled>true</enabled>
                         <type>dmg</type>
+                        <hitIndiana>false</hitIndiana>
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <behavior-instances>
@@ -173,7 +176,7 @@
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -247,6 +250,7 @@
                         <Activate></Activate>
                         <enabled>true</enabled>
                         <type>dmg</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -256,7 +260,7 @@
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
+                                <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -267,11 +271,11 @@
                         <x>1050</x>
                         <y>537</y>
                         <z>0</z>
-                        <width>110</width>
-                        <height>106</height>
+                        <width>106</width>
+                        <height>110</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.509433985</hotspotY>
+                        <hotspotX>0.509433985</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -289,6 +293,8 @@
                         <Activate>ActivateArrows</Activate>
                         <enabled>true</enabled>
                         <type>sup</type>
+                        <hitIndiana>false</hitIndiana>
+                        <arrowDirection>0</arrowDirection>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -299,11 +305,11 @@
                         <x>1053</x>
                         <y>440</y>
                         <z>0</z>
-                        <width>127</width>
-                        <height>41</height>
+                        <width>164</width>
+                        <height>52</height>
                         <depth>0</depth>
-                        <hotspotX>0.503937006</hotspotX>
-                        <hotspotY>0.536585391</hotspotY>
+                        <hotspotX>0.506097555</hotspotX>
+                        <hotspotY>0.538461566</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -321,6 +327,7 @@
                         <Activate>ActivateLitter</Activate>
                         <enabled>true</enabled>
                         <type>sup</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -342,11 +349,11 @@
                         <x>161.363708496</x>
                         <y>693.635559082</y>
                         <z>0</z>
-                        <width>221</width>
-                        <height>77</height>
+                        <width>237</width>
+                        <height>82</height>
                         <depth>0</depth>
-                        <hotspotX>0.50678736</hotspotX>
-                        <hotspotY>0.506493509</hotspotY>
+                        <hotspotX>0.506329119</hotspotX>
+                        <hotspotY>0.51219511</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -364,6 +371,7 @@
                         <Activate>ActivateSpring</Activate>
                         <enabled>true</enabled>
                         <type>sup</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -407,6 +415,7 @@
                         <Activate>ActivateCheese</Activate>
                         <enabled>true</enabled>
                         <type>sup</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -419,6 +428,15 @@
                                 <target-mode>Absolute</target-mode>
                                 <duration>1</duration>
                                 <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -450,6 +468,7 @@
                         <Activate>ActivateSpears</Activate>
                         <enabled>true</enabled>
                         <type>sup</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -482,6 +501,7 @@
                         <Activate></Activate>
                         <enabled>true</enabled>
                         <type>dmg</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -525,6 +545,7 @@
                         <Activate>ActivateScythe</Activate>
                         <enabled>true</enabled>
                         <type>dazz</type>
+                        <hitIndiana>false</hitIndiana>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />

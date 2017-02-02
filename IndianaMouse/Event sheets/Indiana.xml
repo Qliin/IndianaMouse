@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Indiana</name>
+    <events>
+        <event-block sid="380850622662890">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="423961838799242" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="358644017249199" type="System">
+                    <param id="0" name="Object to create">Indiana</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">initialRespawnPoint.X</param>
+                    <param id="3" name="Y">initialRespawnPoint.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="373145843160507" type="Indiana">
+                    <param id="0" name="Instance variable">currentRespawnX</param>
+                    <param id="1" name="Value">initialRespawnPoint.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="900991235317611" type="Indiana">
+                    <param id="0" name="Instance variable">currentRespawnY</param>
+                    <param id="1" name="Value">initialRespawnPoint.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="737559856319014">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="889343091158228" type="Indiana">
+                    <param id="0" name="Object">jumpPoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="384996281274445" type="Indiana">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="417086745366789">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="778489711978371" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="185386125383527" type="Indiana">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="558575112772410">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="439155889379402" type="Indiana">
+                    <param id="0" name="Object">exit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="854129110370734" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="383074829791272">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="664575421486648" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="167663561939177" type="System">
+                    <param id="0" name="Tag">&quot;screenTouched&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>For Debug</comment>
+        <event-block sid="834879109567476">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="227473223189215" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="576294704469310" type="Indiana">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="467603490120076">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="203427779281678" type="Keyboard">
+                    <param id="0" name="Key">67 (C)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="444651119965189" type="Indiana">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="618132806386937" title="Collisions with Traps">
+            <sub-events>
+                <event-block sid="848411165586863">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="128598684221898" type="Indiana">
+                            <param id="0" name="Object">Trap</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="204081253075530" type="Trap">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dmg&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="458416183667225" type="Trap">
+                            <param id="0" name="Instance variable">hitIndiana</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="803276033187305" type="Trap">
+                            <param id="0" name="Instance variable">hitIndiana</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="339851023315612" type="Indiana">
+                            <param id="0" name="Instance variable">hit</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="302300666480161" type="Indiana">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="789897272475961" type="Indiana">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="669803633319568" type="Indiana">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="767418650709127">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="565942638977701" type="Indiana">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="314891251822194" type="Indiana">
+                            <param id="0" name="Instance variable">hit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="559721246658755">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="436965316108670" type="Indiana">
+                            <param id="0" name="Object">quickLitter</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="864704702268228" type="Indiana">
+                            <param id="0" name="Max Speed">150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="721138192834934">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="930054126576730" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="848475291963488" type="Indiana">
+                            <param id="0" name="Max Speed">300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="351943078654939">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="264330639039711" type="Indiana">
+                            <param id="0" name="Object">spring</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="631600737603977" type="Indiana">
+                            <param id="0" name="Vector Y">-1700</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121171426730361">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="418638038342001" type="Indiana">
+                            <param id="0" name="Object">cheese</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="838881605252930" type="cheese" />
+                        <action behavior="Platform" id="11" name="Set enabled" sid="875946926225525" type="Indiana">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="518089828913533" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="278381258380281" type="Indiana">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="612233320283166">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="529786607088053" type="Indiana">
+                            <param id="0" name="Object">spikes</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="505237650753005">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="827942316911014" type="Indiana">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">spikes.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="679811979059103" type="Indiana">
+                                    <param id="0" name="Vector Y">-500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="926591427901325">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="936333541324330" type="Indiana">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">spikes.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="254932152515013" type="Indiana">
+                                    <param id="0" name="Vector Y">500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="920485054403725" title="Animations">
+            <sub-events>
+                <event-block sid="480707041664628">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="558468343807623" type="Indiana" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="372972391925557" type="Indiana" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="490030269364627" type="Indiana">
+                            <param id="0" name="Instance variable">hit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="349206142771572" type="Indiana">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="504141320817113">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="677549260159196" type="Indiana" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="613298460253507" type="Indiana">
+                            <param id="0" name="Instance variable">hit</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="523546461688603" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="499429244557112" type="Indiana">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531894327550819">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="354209002180162" type="Indiana" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="604676381588403" type="Indiana">
+                            <param id="0" name="Instance variable">hit</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="537916923147853" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="205647055684833" type="Indiana">
+                            <param id="0" name="Animation">&quot;Fall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

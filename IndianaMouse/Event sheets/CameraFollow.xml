@@ -6,14 +6,14 @@
         <variable constant="0" name="cameraOffset" sid="769819780421233" static="0" type="number">600</variable>
         <event-block sid="568434290906782">
             <conditions>
-                <condition id="-18" name="On created" sid="384078669617438" type="player" />
+                <condition id="-18" name="On created" sid="384078669617438" type="Indiana" />
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="985358378166143" type="System">
                     <param id="0" name="Object to create">camera</param>
                     <param id="1" name="Layer">&quot;Player&quot;</param>
-                    <param id="2" name="X">player.X + cameraOffset</param>
-                    <param id="3" name="Y">player.Y</param>
+                    <param id="2" name="X">Indiana.X + cameraOffset</param>
+                    <param id="3" name="Y">Indiana.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -23,8 +23,8 @@
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="236544642552972" type="camera">
-                    <param id="0" name="X">lerp(Self.X, player.X + cameraOffset, 0.05)</param>
-                    <param id="1" name="Y">lerp(Self.Y, player.Y, 0.05)</param>
+                    <param id="0" name="X">lerp(Self.X, Indiana.X + cameraOffset, 0.05)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Indiana.Y, 0.2)</param>
                 </action>
             </actions>
         </event-block>

@@ -5,7 +5,7 @@
     <events>
         <event-block sid="868644690048329">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="214329910619633" type="player">
+                <condition id="0" name="On collision with another object" sid="214329910619633" type="Indiana">
                     <param id="0" name="Object">Imeow_trigger</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="943609551238482" type="Imeow_trigger">
