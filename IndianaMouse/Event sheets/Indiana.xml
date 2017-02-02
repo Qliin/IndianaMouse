@@ -24,28 +24,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="737559856319014">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="889343091158228" type="Indiana">
-                    <param id="0" name="Object">jumpPoint</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="384996281274445" type="Indiana">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="417086745366789">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="778489711978371" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="185386125383527" type="Indiana">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="558575112772410">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="439155889379402" type="Indiana">
@@ -55,16 +33,6 @@
             <actions>
                 <action id="-43" name="Go to next/previous layout" sid="854129110370734" type="System">
                     <param id="0" name="Which">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="383074829791272">
-            <conditions>
-                <condition id="0" name="On any touch start" sid="664575421486648" type="Touch" />
-            </conditions>
-            <actions>
-                <action id="-42" name="Signal" sid="167663561939177" type="System">
-                    <param id="0" name="Tag">&quot;screenTouched&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -281,6 +249,32 @@
                         <action id="4" name="Set animation" sid="205647055684833" type="Indiana">
                             <param id="0" name="Animation">&quot;Fall&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="594729184352428" title="Movement">
+            <sub-events>
+                <event-block sid="737559856319014">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="889343091158228" type="Indiana">
+                            <param id="0" name="Object">jumpPoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="384996281274445" type="Indiana">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="417086745366789">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="778489711978371" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="185386125383527" type="Indiana">
+                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                 </event-block>

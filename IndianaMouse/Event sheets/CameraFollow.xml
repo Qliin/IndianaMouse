@@ -24,7 +24,7 @@
             <actions>
                 <action id="-3" name="Set position" sid="236544642552972" type="camera">
                     <param id="0" name="X">lerp(Self.X, Indiana.X + cameraOffset, 0.05)</param>
-                    <param id="1" name="Y">lerp(Self.Y, Indiana.Y, 0.2)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Indiana.Y, 0.04)</param>
                 </action>
             </actions>
         </event-block>

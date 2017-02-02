@@ -126,8 +126,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2645</x>
-                        <y>599</y>
+                        <x>2720</x>
+                        <y>596</y>
                         <z>0</z>
                         <width>79</width>
                         <height>237</height>
@@ -218,8 +218,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1539</x>
-                        <y>598</y>
+                        <x>1307</x>
+                        <y>520</y>
                         <z>0</z>
                         <width>79</width>
                         <height>237</height>
@@ -370,8 +370,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>82</x>
-                        <y>610</y>
+                        <x>2440</x>
+                        <y>604</y>
                         <z>0</z>
                         <width>79</width>
                         <height>158</height>
@@ -441,7 +441,7 @@
                 </instance>
                 <instance type="Imeow_txt" uid="80">
                     <properties>
-                        <text>Whaaa... I knew it wasn&apos;t going to be that simple. I have to do everything myself. Prepare rat, you&apos;ll BUUUURN!!!</text>
+                        <text>WHAAA... I knew it wasn&apos;t going to be that simple. I have to do everything myself. Prepare rat, you&apos;ll BUUUURN!!!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>

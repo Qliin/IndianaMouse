@@ -8,5 +8,15 @@
         <include>Indiana</include>
         <include>CameraFollow</include>
         <include>PauseManager</include>
+        <event-block sid="891137267314529">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="132101909070311" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="760760945687032" type="System">
+                    <param id="0" name="Tag">&quot;screenTouched&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
