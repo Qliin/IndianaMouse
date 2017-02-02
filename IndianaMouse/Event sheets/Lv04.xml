@@ -4,7 +4,7 @@
     <name>Lv04</name>
     <events>
         <include>Game</include>
-        <event-block sid="570652132640793">
+        <event-block disabled="1" sid="570652132640793">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="416610781722365" type="System" />
             </conditions>
