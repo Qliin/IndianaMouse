@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="55" height="10" tilewidth="79" tileheight="79" nextobjectid="1">
  <tileset firstgid="1" name="tileset_teste" tilewidth="79" tileheight="79" tilecount="102" columns="6">
-  <image source="tileset_teste.png" width="475" height="1346"/>
+  <image source="../../../Users/Aecio/Documents/Projeto Games/Indiana Mouse/tileset_teste.png" width="475" height="1346"/>
  </tileset>
  <layer name="level" width="55" height="10">
   <data encoding="csv">
