@@ -7,6 +7,9 @@
         <event-block sid="529616651696611">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="700435574740116" type="System" />
+                <condition id="5" inverted="1" name="Is tag playing" sid="389121597877983" type="Audio">
+                    <param id="0" name="Tag">&quot;start_theme&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="5" name="Set web font" sid="341387677864468" type="tap_to_start">
