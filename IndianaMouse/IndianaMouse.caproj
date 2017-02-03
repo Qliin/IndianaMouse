@@ -789,6 +789,11 @@
         </object-type>
         <object-type name="tap_to_start" sid="317111017968909">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Flash" sid="668837594411415">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="start_btn" sid="867730983373172">
             <plugin id="Sprite" />
@@ -797,7 +802,18 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832304844748357" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500773" hotspotY="0.501661" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\Play_UI.png">
+                        <collision-poly>
+                            <point x="0.0556414" y="0.119601" />
+                            <point x="0.499227" y="0.00996678" />
+                            <point x="0.944359" y="0.119601" />
+                            <point x="0.998454" y="0.498339" />
+                            <point x="0.945904" y="0.883721" />
+                            <point x="0.499227" y="0.993355" />
+                            <point x="0.0556414" y="0.880399" />
+                            <point x="0.00309119" y="0.498339" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -808,7 +824,18 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818126732214984" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500773" hotspotY="0.501661" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\Credits_UI.png">
+                        <collision-poly>
+                            <point x="0.0556414" y="0.119601" />
+                            <point x="0.499227" y="0.00996678" />
+                            <point x="0.944359" y="0.119601" />
+                            <point x="0.998454" y="0.498339" />
+                            <point x="0.945904" y="0.883721" />
+                            <point x="0.499227" y="0.990033" />
+                            <point x="0.0556414" y="0.880399" />
+                            <point x="0.00309119" y="0.498339" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -980,6 +1007,29 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754521326004626" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tbStartScreen" sid="875794753634596">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\Indiana_mouse_tittle.png" />
+        </object-type>
+        <object-type name="button" sid="189555156226772">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="941761218050953" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\level_UI.png">
+                        <collision-poly>
+                            <point x="0.118182" y="0.132653" />
+                            <point x="0.5" y="0.0442177" />
+                            <point x="0.884848" y="0.129252" />
+                            <point x="0.993939" y="0.5" />
+                            <point x="0.881818" y="0.867347" />
+                            <point x="0.5" y="0.955782" />
+                            <point x="0.121212" y="0.863946" />
+                            <point x="0.00909091" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
