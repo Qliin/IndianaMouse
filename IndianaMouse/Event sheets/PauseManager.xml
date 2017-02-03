@@ -130,5 +130,56 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="434432074687979">
+            <conditions>
+                <condition id="3" name="On touched object" sid="828228243623922" type="Touch">
+                    <param id="0" name="Object">continue</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="541730841588227" type="continue" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="824902099298291" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="222906678740999" type="pause">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="783492510249976" type="continue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="231124332599252" type="hudTxt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="204998055123608" type="hudMenu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="358945357498530" type="exitHud">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="815693251006180" type="exitMenu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="180210810498229" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="833710882411324">
+            <conditions>
+                <condition id="3" name="On touched object" sid="748766786095432" type="Touch">
+                    <param id="0" name="Object">exitMenu</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="552278687027720" type="exitMenu" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="276602367630522" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="6" name="Stop" sid="434370499482615" type="Audio">
+                    <param id="0" name="Tag">&quot;main_theme&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="558899732880087" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
