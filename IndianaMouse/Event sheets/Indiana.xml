@@ -22,16 +22,6 @@
                     <param id="0" name="Instance variable">currentRespawnY</param>
                     <param id="1" name="Value">initialRespawnPoint.Y</param>
                 </action>
-                <action id="-3" name="Create object" sid="215037559941296" type="System">
-                    <param id="0" name="Object to create">imeowtapHand</param>
-                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                    <param id="2" name="X">handRespawnPoint.X</param>
-                    <param id="3" name="Y">handRespawnPoint.Y</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="996001123044890" type="imeowtapHand">
-                    <param id="0" name="Pin to">Indiana</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="558575112772410">
