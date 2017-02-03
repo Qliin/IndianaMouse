@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Credits</name>
     <events>
+        <include>Font</include>
         <event-block sid="300302121811787">
             <conditions>
                 <condition id="0" name="On any touch start" sid="465348975794381" type="Touch" />

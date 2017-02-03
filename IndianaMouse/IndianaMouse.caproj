@@ -732,7 +732,18 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495242530139349" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502041" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\pause_UI.png">
+                        <collision-poly>
+                            <point x="0.0981595" y="0.130612" />
+                            <point x="0.5" y="0.044898" />
+                            <point x="0.901841" y="0.130612" />
+                            <point x="1" y="0.497959" />
+                            <point x="0.901841" y="0.869388" />
+                            <point x="0.5" y="0.963265" />
+                            <point x="0.095092" y="0.873469" />
+                            <point x="0.00306748" y="0.497959" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -740,11 +751,22 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426976551251251" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502041" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\continue_UI.png">
+                        <collision-poly>
+                            <point x="0.0981595" y="0.130612" />
+                            <point x="0.5" y="0.044898" />
+                            <point x="0.901841" y="0.130612" />
+                            <point x="1" y="0.497959" />
+                            <point x="0.901841" y="0.869388" />
+                            <point x="0.5" y="0.963265" />
+                            <point x="0.095092" y="0.873469" />
+                            <point x="0.00306748" y="0.497959" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="pauseHudTxt" sid="625041841726972">
+        <object-type name="hudTxt" sid="625041841726972">
             <plugin id="Text" />
         </object-type>
         <object-type name="Tilemap" sid="789345680539026">
@@ -860,6 +882,47 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="hudMenu" sid="119145139155344">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921734076296390" speed="5">
+                    <frame duration="1" hotspotX="0.50033" hotspotY="0.50037" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Pop_up.png">
+                        <image-point name="Title" x="0.493729" y="0.362897" />
+                        <image-point name="ItemLeft" x="0.366997" y="0.688101" />
+                        <image-point name="ItemRight" x="0.667987" y="0.679231" />
+                        <collision-poly>
+                            <point x="0.190099" y="0.21286" />
+                            <point x="0.49967" y="0.258684" />
+                            <point x="0.809901" y="0.21286" />
+                            <point x="0.957756" y="0.49963" />
+                            <point x="0.945875" y="0.939394" />
+                            <point x="0.49967" y="0.980044" />
+                            <point x="0.0646865" y="0.927568" />
+                            <point x="0.0607261" y="0.49963" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="exitHud" sid="768969226338730">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593510895758739" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\close_UI.png">
+                        <collision-poly>
+                            <point x="0.116505" y="0.141176" />
+                            <point x="0.5" y="0.194118" />
+                            <point x="0.849515" y="0.182353" />
+                            <point x="0.820388" y="0.5" />
+                            <point x="0.854369" y="0.823529" />
+                            <point x="0.5" y="0.664706" />
+                            <point x="0.11165" y="0.864706" />
+                            <point x="0.252427" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -896,6 +959,16 @@
                 <member>Lv04_map</member>
             </members>
         </family>
+        <family name="AllText" plugin-id="Text" sid="788337597076484">
+            <members>
+                <member>hudTxt</member>
+                <member>Imeow_txt</member>
+                <member>tap_to_start</member>
+                <member>tapToContinue</member>
+                <member>Text</member>
+                <member>trapTime</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>StartScreen.xml</layout>
@@ -919,6 +992,7 @@
         <event-sheet>StartScreen.xml</event-sheet>
         <event-sheet>MainMenu.xml</event-sheet>
         <event-sheet>Credits.xml</event-sheet>
+        <event-sheet>Font.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="46">
@@ -971,6 +1045,11 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="fonts">
+            <file name="lithos_pro_black-webfont.woff" />
+            <file name="lithos_pro_regular-webfont.woff" />
+            <file name="stylesheet.css" />
         </file-folder>
     </files-folder>
 </c2project>

@@ -88,10 +88,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>397</x>
+                        <x>446.5</x>
                         <y>370</y>
                         <z>0</z>
-                        <width>231</width>
+                        <width>372</width>
                         <height>61</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -137,14 +137,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1565</x>
-                        <y>92</y>
+                        <x>1341</x>
+                        <y>99.269378662</y>
                         <z>0</z>
-                        <width>163</width>
+                        <width>84</width>
                         <height>70</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.502040803</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -159,41 +159,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1493</x>
-                        <y>248</y>
+                        <x>1277</x>
+                        <y>600.077575684</y>
                         <z>0</z>
-                        <width>413</width>
-                        <height>76</height>
+                        <width>84</width>
+                        <height>70</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="pauseHudTxt" uid="15">
-                    <properties>
-                        <text>Pause</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-37,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1337</x>
-                        <y>313</y>
-                        <z>0</z>
-                        <width>405</width>
-                        <height>85</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotY>0.502040803</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -224,6 +197,77 @@
                         <z>0</z>
                         <width>146</width>
                         <height>174</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="hudMenu" uid="169">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1017</x>
+                        <y>1033</y>
+                        <z>0</z>
+                        <width>879</width>
+                        <height>700</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500330031</hotspotX>
+                        <hotspotY>0.500369549</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="hudTxt" uid="15">
+                    <properties>
+                        <text>Pause</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-37,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>818</x>
+                        <y>896</y>
+                        <z>0</z>
+                        <width>405</width>
+                        <height>85</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="exitHud" uid="170">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1546</x>
+                        <y>409</y>
+                        <z>0</z>
+                        <width>84</width>
+                        <height>70</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

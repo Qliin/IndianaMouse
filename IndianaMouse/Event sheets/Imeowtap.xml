@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Imeowtap</name>
     <events>
+        <include>Font</include>
         <event-block sid="868644690048329">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="214329910619633" type="Indiana">
@@ -43,6 +44,10 @@
                     <param id="2" name="X">Imeow_hud.X</param>
                     <param id="3" name="Y">Imeow_hud.Y</param>
                 </action>
+                <action id="5" name="Set web font" sid="811488907043044" type="tapToContinue">
+                    <param id="0" name="Family name">&quot;lithos_pro_regular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
                 <action id="-4" name="Set position to another object" sid="362917926376914" type="tapToContinue">
                     <param id="0" name="Object">Imeow_hud</param>
                     <param id="1" name="Image point (optional)">1</param>
@@ -52,6 +57,9 @@
                     <param id="1" name="Y">Imeow_hud.Y</param>
                 </action>
                 <action id="-24" name="Move to top" sid="869208019738398" type="Imeow_txt" />
+                <action id="-15" name="Set visible" sid="656704559811554" type="pause">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="137770100192720">
@@ -67,6 +75,9 @@
                         <action behavior="Fade" id="1" name="Start fade" sid="302454626181580" type="Imeow_txt" />
                         <action behavior="Fade" id="1" name="Start fade" sid="390971360291434" type="tapToContinue" />
                         <action behavior="Fade" id="1" name="Start fade" sid="461386744896594" type="Imeow_portrait" />
+                        <action id="-15" name="Set visible" sid="683309117337513" type="pause">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

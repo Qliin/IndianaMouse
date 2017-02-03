@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainMenu</name>
     <events>
+        <include>Font</include>
         <event-block sid="636067908090188">
             <conditions>
                 <condition id="17" name="On tap object" sid="692094018565274" type="Touch">

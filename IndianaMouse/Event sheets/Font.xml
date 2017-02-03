@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Font</name>
+    <events>
+        <event-block sid="123822097225738">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="483553020215960" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="273270672492889" type="AllText">
+                    <param id="0" name="Family name">&quot;lithos_pro_regular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
