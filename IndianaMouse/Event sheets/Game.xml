@@ -62,5 +62,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="838222630146203">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="146074085427099" type="System" />
+                <condition id="-3" name="Is on-screen" sid="295870317338927" type="exit" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="401096180467927" type="imeowtapHand" />
+                <action behavior="Fade" id="1" name="Start fade" sid="224175849338388" type="imeowtapHand" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

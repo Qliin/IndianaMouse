@@ -568,28 +568,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="handRespawnPoint" uid="176">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-206</x>
-                        <y>1167</y>
-                        <z>0</z>
-                        <width>80</width>
-                        <height>149</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -909,6 +887,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="arrowDispenser" uid="177">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activated>false</activated>
+                        <timeToActivate>2.5</timeToActivate>
+                        <Activate>ActivateArrows</Activate>
+                        <enabled>true</enabled>
+                        <type>sup</type>
+                        <hitIndiana>false</hitIndiana>
+                        <arrowDirection>90</arrowDirection>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4623</x>
+                        <y>1188</y>
+                        <z>0</z>
+                        <width>164</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.506097555</hotspotX>
+                        <hotspotY>0.524999976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -945,6 +957,28 @@
                         <height>158</height>
                         <depth>0</depth>
                         <hotspotX>0.506329119</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="handRespawnPoint" uid="176">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-190</x>
+                        <y>1067</y>
+                        <z>0</z>
+                        <width>80</width>
+                        <height>149</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
