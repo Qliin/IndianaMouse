@@ -482,7 +482,7 @@
                 </instance>
                 <instance type="exit" uid="68">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -490,14 +490,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>6348</x>
-                        <y>1268</y>
+                        <x>6209.088867188</x>
+                        <y>1294.704711914</y>
                         <z>0</z>
-                        <width>152</width>
-                        <height>304</height>
+                        <width>192</width>
+                        <height>251</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.498466253</hotspotX>
+                        <hotspotY>0.492942452</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -972,8 +972,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-190</x>
-                        <y>1067</y>
+                        <x>-270</x>
+                        <y>1127</y>
                         <z>0</z>
                         <width>80</width>
                         <height>149</height>

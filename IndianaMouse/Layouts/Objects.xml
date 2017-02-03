@@ -588,7 +588,7 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <fade-out-time>2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -599,13 +599,13 @@
                         <x>747.520019531</x>
                         <y>260.324890137</y>
                         <z>0</z>
-                        <width>315</width>
-                        <height>233</height>
+                        <width>502.546142578</width>
+                        <height>230.897094727</height>
                         <depth>0</depth>
-                        <hotspotX>0.560000002</hotspotX>
-                        <hotspotY>0.519855618</hotspotY>
-                        <angle>0.848172843</angle>
-                        <opacity>1</opacity>
+                        <hotspotX>0.500482142</hotspotX>
+                        <hotspotY>0.482695818</hotspotY>
+                        <angle>0.245929837</angle>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
             </instances>

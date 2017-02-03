@@ -647,7 +647,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396886069959922" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.498466" hotspotY="0.492942" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\door.png">
+                        <collision-poly>
+                            <point x="0.0122699" y="0.00760043" />
+                            <point x="0.989264" y="0.00434311" />
+                            <point x="0.995399" y="0.984799" />
+                            <point x="0.00613497" y="0.981542" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -961,21 +968,10 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799272994750572" speed="5">
-                    <frame duration="1" hotspotX="0.56" hotspotY="0.519856" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_1.png">
-                        <collision-poly>
-                            <point x="0.335385" y="0.357401" />
-                            <point x="0.56" y="0.0866426" />
-                            <point x="0.978462" y="0.129964" />
-                            <point x="0.64" y="0.519856" />
-                            <point x="0.850769" y="0.759928" />
-                            <point x="0.56" y="0.861011" />
-                            <point x="0.0784615" y="0.983755" />
-                            <point x="0.290769" y="0.519856" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_3.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_4.png" />
+                    <frame duration="1" hotspotX="0.500482" hotspotY="0.482696" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\Imeowtap_hand_2.png" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.483221" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\Imeowtap_hand_1.png" />
+                    <frame duration="1" hotspotX="0.50099" hotspotY="0.482696" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\Imeowtap_hand_3.png" />
+                    <frame duration="1" hotspotX="0.50096" hotspotY="0.483264" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\Imeowtap_hand_4.png" />
                 </animation>
             </animation-folder>
         </object-type>
