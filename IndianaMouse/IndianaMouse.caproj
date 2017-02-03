@@ -785,6 +785,9 @@
         </object-type>
         <object-type name="start_btn" sid="867730983373172">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="enabled" sid="720320796269842" type="boolean" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832304844748357" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -793,6 +796,9 @@
         </object-type>
         <object-type name="credits_btn" sid="375830982066908">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="enabled" sid="569852243581051" type="boolean" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818126732214984" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />

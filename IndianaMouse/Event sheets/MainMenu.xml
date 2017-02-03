@@ -9,6 +9,9 @@
                 <condition id="17" name="On tap object" sid="692094018565274" type="Touch">
                     <param id="0" name="Object">credits_btn</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="501536663342887" type="credits_btn">
+                    <param id="0" name="Instance variable">enabled</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="33" name="Stop all" sid="931602292730114" type="Audio" />
@@ -22,6 +25,9 @@
                 <condition id="17" name="On tap object" sid="961984373370379" type="Touch">
                     <param id="0" name="Object">start_btn</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="229568943818912" type="start_btn">
+                    <param id="0" name="Instance variable">enabled</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="33" name="Stop all" sid="210466834852628" type="Audio" />
@@ -33,18 +39,41 @@
         <event-block sid="829458483876693">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="306424613815295" type="System" />
-                <condition id="5" inverted="1" name="Is tag playing" sid="872206658753012" type="Audio">
-                    <param id="0" name="Tag">&quot;start_theme&quot;</param>
-                </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Play" sid="314438857565528" type="Audio">
-                    <param id="0" name="Audio file">Mountain Emperor</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">-10</param>
-                    <param id="1" name="Tag (optional)">&quot;start_theme&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="230362804809754">
+                    <conditions>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="872206658753012" type="Audio">
+                            <param id="0" name="Tag">&quot;start_theme&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="314438857565528" type="Audio">
+                            <param id="0" name="Audio file">Mountain Emperor</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;start_theme&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="442461679688535">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="421187047078212" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="362024246038775" type="credits_btn">
+                            <param id="0" name="Instance variable">enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="962381216175998" type="start_btn">
+                            <param id="0" name="Instance variable">enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

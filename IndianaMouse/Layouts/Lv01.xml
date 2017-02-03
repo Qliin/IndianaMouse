@@ -13,12 +13,12 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="433701991848439">
+        <layer name="BG_far" sid="433701991848439">
             <initially-visible>1</initially-visible>
             <background-color>153,153,153</background-color>
             <transparent>0</transparent>
             <parallax>
-                <x>1.02</x>
+                <x>0.5</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -218,12 +218,12 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Backgournd_parallax" sid="681855934543839">
+        <layer name="BG_near" sid="681855934543839">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1.05</x>
+                <x>0.8</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -412,7 +412,7 @@
                 </instance>
                 <instance type="exit" uid="11">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -420,8 +420,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4186</x>
-                        <y>561</y>
+                        <x>4370</x>
+                        <y>557</y>
                         <z>0</z>
                         <width>152</width>
                         <height>304</height>
@@ -613,12 +613,12 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Dust_parallax" sid="128938027807704">
+        <layer name="FG" sid="128938027807704">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1.1</x>
+                <x>1.5</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -637,10 +637,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>174</x>
-                        <y>-119</y>
+                        <x>-785</x>
+                        <y>-100</y>
                         <z>0</z>
-                        <width>4624</width>
+                        <width>6270</width>
                         <height>1041</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
