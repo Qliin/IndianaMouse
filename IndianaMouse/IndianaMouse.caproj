@@ -751,7 +751,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426976551251251" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502041" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\continue_UI.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502041" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\repeat_UI.png">
                         <collision-poly>
                             <point x="0.0981595" y="0.130612" />
                             <point x="0.5" y="0.044898" />
@@ -887,9 +887,10 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921734076296390" speed="5">
                     <frame duration="1" hotspotX="0.50033" hotspotY="0.50037" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Pop_up.png">
-                        <image-point name="Title" x="0.493729" y="0.362897" />
-                        <image-point name="ItemLeft" x="0.366997" y="0.688101" />
-                        <image-point name="ItemRight" x="0.667987" y="0.679231" />
+                        <image-point name="Title" x="0.264686" y="0.313378" />
+                        <image-point name="ItemLeft" x="0.380198" y="0.688101" />
+                        <image-point name="ItemRight" x="0.612541" y="0.688101" />
+                        <image-point name="exit" x="0.836964" y="0.546194" />
                         <collision-poly>
                             <point x="0.190099" y="0.21286" />
                             <point x="0.49967" y="0.258684" />
@@ -918,6 +919,25 @@
                             <point x="0.5" y="0.664706" />
                             <point x="0.11165" y="0.864706" />
                             <point x="0.252427" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="exitMenu" sid="701957152060207">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="526543671170247" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502041" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\menu_UI.png">
+                        <collision-poly>
+                            <point x="0.095092" y="0.126531" />
+                            <point x="0.5" y="0.0408163" />
+                            <point x="0.901841" y="0.130612" />
+                            <point x="1" y="0.497959" />
+                            <point x="0.898773" y="0.865306" />
+                            <point x="0.5" y="0.959184" />
+                            <point x="0.104294" y="0.861224" />
+                            <point x="0.00306748" y="0.497959" />
                         </collision-poly>
                     </frame>
                 </animation>
