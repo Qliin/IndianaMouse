@@ -974,9 +974,9 @@
                         <image-point name="score_menu" x="0.213861" y="0.90983" />
                         <image-point name="score_restart" x="0.49901" y="0.921656" />
                         <image-point name="score_next" x="0.786799" y="0.90983" />
-                        <image-point name="star1" x="0.215842" y="0.713969" />
-                        <image-point name="star2" x="0.511551" y="0.727273" />
-                        <image-point name="star3" x="0.788779" y="0.725795" />
+                        <image-point name="star1" x="0.237624" y="0.668145" />
+                        <image-point name="star2" x="0.511551" y="0.668145" />
+                        <image-point name="star3" x="0.788779" y="0.668145" />
                         <collision-poly>
                             <point x="0.190099" y="0.21286" />
                             <point x="0.49967" y="0.258684" />
@@ -1162,6 +1162,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text2" sid="541017585864864">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -1272,6 +1275,8 @@
         <file name="Foice_new.ogg" />
         <file name="Areia_movediça_new.m4a" />
         <file name="Areia_movediça_new.ogg" />
+        <file name="mouse.m4a" />
+        <file name="mouse.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Cartoon Battle.m4a" />

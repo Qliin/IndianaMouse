@@ -518,7 +518,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Imeow_trigger" uid="83">
+                <instance type="Imeow_trigger" uid="96">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -533,87 +533,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1070</x>
-                        <y>672</y>
-                        <z>0</z>
-                        <width>79</width>
-                        <height>237</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.502109706</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="trap_trigger" uid="89">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <triggered>false</triggered>
-                        <target>90</target>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>188</x>
-                        <y>750</y>
-                        <z>0</z>
-                        <width>79</width>
-                        <height>237</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.502109706</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Imeow_trigger" uid="96">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <textUID>100</textUID>
-                        <triggered>false</triggered>
-                        <no_stop>false</no_stop>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3417</x>
-                        <y>592</y>
-                        <z>0</z>
-                        <width>79</width>
-                        <height>237</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.502109706</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="trap_trigger" uid="101">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <triggered>false</triggered>
-                        <target>95</target>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3518</x>
-                        <y>590</y>
+                        <x>1160</x>
+                        <y>656</y>
                         <z>0</z>
                         <width>79</width>
                         <height>237</height>
@@ -765,7 +686,7 @@
                         <activated>false</activated>
                         <timeToActivate>2.5</timeToActivate>
                         <Activate>ActivateArrows</Activate>
-                        <enabled>false</enabled>
+                        <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <arrowDirection>90</arrowDirection>
@@ -799,7 +720,7 @@
                         <activated>false</activated>
                         <timeToActivate>2.5</timeToActivate>
                         <Activate>ActivateArrows</Activate>
-                        <enabled>false</enabled>
+                        <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <arrowDirection>90</arrowDirection>
@@ -811,7 +732,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>4345</x>
-                        <y>237</y>
+                        <y>264</y>
                         <z>0</z>
                         <width>164</width>
                         <height>80</height>
@@ -980,7 +901,7 @@
                     <properties>
                         <text>Hmmm... These traps are really old. They take longer to activate. At this rate i&apos;ll have to take some precautions... GUAAAARDS!!!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-37,400,0</font>
+                        <font>Lucida Bright,-37,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>

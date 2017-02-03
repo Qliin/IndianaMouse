@@ -576,85 +576,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trap_trigger" uid="37">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <triggered>false</triggered>
-                        <target>28</target>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2493</x>
-                        <y>594</y>
-                        <z>0</z>
-                        <width>79</width>
-                        <height>237</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.502109706</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="trap_trigger" uid="38">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <triggered>false</triggered>
-                        <target>30</target>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2725</x>
-                        <y>596</y>
-                        <z>0</z>
-                        <width>79</width>
-                        <height>237</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.502109706</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Imeow_trigger" uid="94">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <textUID>93</textUID>
-                        <triggered>false</triggered>
-                        <no_stop>false</no_stop>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3246</x>
-                        <y>591</y>
-                        <z>0</z>
-                        <width>79</width>
-                        <height>237</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.502109706</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -685,7 +606,7 @@
                         <activated>false</activated>
                         <timeToActivate>1.5</timeToActivate>
                         <Activate>ActivateScythe</Activate>
-                        <enabled>true</enabled>
+                        <enabled>false</enabled>
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <endAngle>60</endAngle>
@@ -775,7 +696,7 @@
                         <activated>false</activated>
                         <timeToActivate>0.5</timeToActivate>
                         <Activate>ActivateFireball</Activate>
-                        <enabled>true</enabled>
+                        <enabled>false</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                     </instance-variables>

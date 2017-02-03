@@ -93,6 +93,12 @@
                             <param id="0" name="Instance variable">hit</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Play" sid="960995714263689" type="Audio">
+                            <param id="0" name="Audio file">mouse</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;hitAudio&quot;</param>
+                        </action>
                         <action id="4" name="Set animation" sid="302300666480161" type="Indiana">
                             <param id="0" name="Animation">&quot;Hit&quot;</param>
                             <param id="1" name="From">1</param>
