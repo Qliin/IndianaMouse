@@ -943,6 +943,41 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="imeowtapHand" sid="678003156842747">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="181111729493855">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799272994750572" speed="5">
+                    <frame duration="1" hotspotX="0.56" hotspotY="0.519856" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_1.png">
+                        <collision-poly>
+                            <point x="0.335385" y="0.357401" />
+                            <point x="0.56" y="0.0866426" />
+                            <point x="0.978462" y="0.129964" />
+                            <point x="0.64" y="0.519856" />
+                            <point x="0.850769" y="0.759928" />
+                            <point x="0.56" y="0.861011" />
+                            <point x="0.0784615" y="0.983755" />
+                            <point x="0.290769" y="0.519856" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\Projeto Games\Indiana Mouse\Imeowtap_hand_4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="handRespawnPoint" sid="984234991734511">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754521326004626" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">

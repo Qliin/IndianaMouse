@@ -574,6 +574,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="imeowtapHand" uid="172">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>747.520019531</x>
+                        <y>260.324890137</y>
+                        <z>0</z>
+                        <width>315</width>
+                        <height>233</height>
+                        <depth>0</depth>
+                        <hotspotX>0.560000002</hotspotX>
+                        <hotspotY>0.519855618</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
