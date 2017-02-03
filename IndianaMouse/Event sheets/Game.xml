@@ -34,5 +34,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="258024865862486">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="432486667504262" type="System" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="192794265113286" type="Eye">
+                    <param id="0" name="Angle">angle(Eye.X, Eye.Y, Indiana.X,Indiana.y)</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

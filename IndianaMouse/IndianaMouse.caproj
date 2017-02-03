@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
@@ -22,6 +23,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -772,6 +774,72 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818126732214984" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="536041467591510">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\projects\posUEA\games\IndianaMouse\new\assets\bg.png" />
+        </object-type>
+        <object-type name="Sprite2" sid="272529067217417">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769970195097026" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\projects\posUEA\games\IndianaMouse\new\assets\column.png">
+                        <collision-poly>
+                            <point x="0.335938" y="0.671875" />
+                            <point x="0.901855" y="0.196289" />
+                            <point x="0.901855" y="0.803711" />
+                            <point x="0.347168" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="369449265566099">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\projects\posUEA\games\IndianaMouse\new\assets\dust.png" />
+        </object-type>
+        <object-type name="Sprite3" sid="813333452435281">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="107341035339412" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501493" original-source="D:\projects\posUEA\games\IndianaMouse\new\assets\mask.png">
+                        <collision-poly>
+                            <point x="0.0132743" y="0.00895522" />
+                            <point x="0.5" y="0.295522" />
+                            <point x="0.99115" y="0.00597015" />
+                            <point x="0.977876" y="0.498507" />
+                            <point x="0.823009" y="0.880597" />
+                            <point x="0.5" y="0.99403" />
+                            <point x="0.172566" y="0.883582" />
+                            <point x="0.00884956" y="0.498507" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Eye" sid="211525020706691">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="805214625109081">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="931559732961824" speed="5">
+                    <frame duration="1" hotspotX="0.495238" hotspotY="0.514563" original-source="D:\projects\posUEA\Platform\bg_eyes.png">
+                        <collision-poly>
+                            <point x="0.147059" y="0.147059" />
+                            <point x="0.5" y="0" />
+                            <point x="0.852941" y="0.147059" />
+                            <point x="1" y="0.5" />
+                            <point x="0.852941" y="0.852941" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147059" y="0.852941" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
