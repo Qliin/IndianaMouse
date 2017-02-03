@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <include>Score</include>
         <include>Font</include>
         <include>Imeowtap</include>
         <include>Traps</include>
@@ -22,7 +23,7 @@
         <event-block sid="223116856601500">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="756916829511926" type="System" />
-                <condition id="5" inverted="1" name="Is tag playing" sid="163064376250842" type="Audio">
+                <condition disabled="1" id="5" inverted="1" name="Is tag playing" sid="163064376250842" type="Audio">
                     <param id="0" name="Tag">&quot;main_theme&quot;</param>
                 </condition>
             </conditions>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Score</name>
+    <events>
+        <variable constant="0" name="lv_nStars" sid="904770522510979" static="0" type="number">0</variable>
+        <variable constant="0" name="lv_nTraps" sid="370717956588705" static="0" type="number">0</variable>
+        <variable constant="0" name="playerScore" sid="676587423920085" static="0" type="number">0</variable>
+        <event-block sid="448828883890699">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="169403127864854" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="225941751089454" type="System">
+                    <param id="0" name="Variable">lv_nTraps</param>
+                    <param id="1" name="Value">lv_traps.Get(LayoutName)</param>
+                </action>
+                <action id="-9" name="Set value" sid="565549513918619" type="System">
+                    <param id="0" name="Variable">lv_nStars</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="232465026858184" type="System">
+                    <param id="0" name="Variable">playerScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="360085764795415">
+            <conditions>
+                <condition id="0" name="On function" sid="818799573238307" type="Function">
+                    <param id="0" name="Name">&quot;CalcScore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="885851243204094" type="System">
+                    <param id="0" name="Variable">playerScore</param>
+                    <param id="1" name="Value">Indiana.nHits/lv_nTraps</param>
+                </action>
+                <action id="0" name="Call function" sid="959580086817086" type="Function">
+                    <param id="0" name="Name">&quot;ShowScoreHUD&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="431549694006644" type="Function">
+                    <param id="0" name="Name">&quot;CalcNStars&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="520982892718450" type="Function">
+                    <param id="0" name="Name">&quot;ShowStars&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="483741291304169">
+            <conditions>
+                <condition id="0" name="On function" sid="575915973347355" type="Function">
+                    <param id="0" name="Name">&quot;ShowScoreHUD&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="980144704793987" type="System">
+                    <param id="0" name="Object to create">score_txt</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">hudMenu.X</param>
+                    <param id="3" name="Y">hudMenu.Y</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="949049493691811" type="score_txt">
+                    <param id="0" name="Object">hudMenu</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="5" name="Set web font" sid="584276788722118" type="score_txt">
+                    <param id="0" name="Family name">&quot;lithos_pro_regular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="596684011236660" type="menu_btn">
+                    <param id="0" name="Object">hudMenu</param>
+                    <param id="1" name="Image point (optional)">5</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="728073967298089" type="restart_btn">
+                    <param id="0" name="Object">hudMenu</param>
+                    <param id="1" name="Image point (optional)">6</param>
+                </action>
+                <action id="-3" name="Create object" sid="488901915132953" type="System">
+                    <param id="0" name="Object to create">continue_btn</param>
+                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="343192720326162" type="continue_btn">
+                    <param id="0" name="Object">hudMenu</param>
+                    <param id="1" name="Image point (optional)">7</param>
+                </action>
+                <action id="-15" name="Set visible" sid="999570712887543" type="hudMenu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="544363563396679" type="menu_btn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="905913970837619" type="restart_btn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752865215990856">
+            <conditions>
+                <condition id="0" name="On function" sid="422948376378804" type="Function">
+                    <param id="0" name="Name">&quot;ShowStars&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="343253719034713">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="146672843271485" type="System">
+                            <param id="0" name="Count">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="647726976299874" type="System">
+                            <param id="0" name="Object to create">star_score</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">hudMenu.X</param>
+                            <param id="3" name="Y">hudMenu.Y</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="288951468434130" type="star_score">
+                            <param id="0" name="Object">hudMenu</param>
+                            <param id="1" name="Image point (optional)">&quot;star&quot;&amp;loopindex+1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="938075113432955">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="773312125216609" type="System">
+                                    <param id="0" name="Variable">lv_nStars</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="441454212701471" type="star_score">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="688257757079017" type="System">
+                                    <param id="0" name="Variable">lv_nStars</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="855547044318639">
+            <conditions>
+                <condition id="17" name="On tap object" sid="950560738828408" type="Touch">
+                    <param id="0" name="Object">continue_btn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="181096708687272" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="766499834350238">
+            <conditions>
+                <condition id="0" name="On function" sid="588381897531279" type="Function">
+                    <param id="0" name="Name">&quot;CalcNStars&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="331947928855828">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="830543312137884" type="System">
+                            <param id="0" name="Variable">playerScore</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0.3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="347325706238127" type="System">
+                            <param id="0" name="Variable">lv_nStars</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397581927958453">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="988499495648951" type="System">
+                            <param id="0" name="Variable">playerScore</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0.3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="891018990052093" type="System">
+                            <param id="0" name="Variable">playerScore</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="200709836709397" type="System">
+                            <param id="0" name="Variable">lv_nStars</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="548253641286655">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="258776868671190" type="System">
+                            <param id="0" name="Variable">playerScore</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="662219406102000" type="System">
+                            <param id="0" name="Variable">lv_nStars</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="661567574156008">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="737390157567894" type="System">
+                            <param id="0" name="Variable">playerScore</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="632857715279678" type="System">
+                            <param id="0" name="Variable">lv_nStars</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -302,6 +302,7 @@
                     <instance-variables>
                         <textUID>22</textUID>
                         <triggered>false</triggered>
+                        <no_stop>false</no_stop>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -390,7 +391,7 @@
                 </instance>
                 <instance type="exit" uid="11">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -420,6 +421,7 @@
                     <instance-variables>
                         <textUID>80</textUID>
                         <triggered>false</triggered>
+                        <no_stop>false</no_stop>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -441,11 +443,12 @@
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <textUID>91</textUID>
                         <triggered>false</triggered>
+                        <no_stop>true</no_stop>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -670,7 +673,7 @@
             <instances>
                 <instance type="Imeow_txt" uid="22">
                     <properties>
-                        <text>GUARDS! Arrest him... wait a moment. He&apos;s going to fall in that pit. HAHAHA, you&apos;ll pay for trying to steal from me!!</text>
+                        <text>Come here you little pest... wait a moment. He&apos;s going to fall in that pit. HAHAHA, you&apos;ll pay for trying to steal from me!!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
@@ -786,6 +789,8 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="lv_traps" uid="193" />
+    </nonworld-instances>
     <effects />
 </c2layout>

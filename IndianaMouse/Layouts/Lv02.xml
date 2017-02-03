@@ -432,7 +432,7 @@
                 </instance>
                 <instance type="exit" uid="29">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -506,6 +506,7 @@
                     <instance-variables>
                         <textUID>32</textUID>
                         <triggered>false</triggered>
+                        <no_stop>false</no_stop>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -558,6 +559,7 @@
                     <instance-variables>
                         <textUID>35</textUID>
                         <triggered>false</triggered>
+                        <no_stop>false</no_stop>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -636,6 +638,7 @@
                     <instance-variables>
                         <textUID>93</textUID>
                         <triggered>false</triggered>
+                        <no_stop>false</no_stop>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

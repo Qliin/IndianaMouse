@@ -31,8 +31,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-43" name="Go to next/previous layout" sid="854129110370734" type="System">
+                <action disabled="1" id="-43" name="Go to next/previous layout" sid="854129110370734" type="System">
                     <param id="0" name="Which">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="555261905857096" type="Indiana">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Call function" sid="931890216846611" type="Function">
+                    <param id="0" name="Name">&quot;CalcScore&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -90,8 +97,8 @@
                             <param id="0" name="Animation">&quot;Hit&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-12" name="Subtract from" sid="789897272475961" type="Indiana">
-                            <param id="0" name="Instance variable">life</param>
+                        <action id="-11" name="Add to" sid="789897272475961" type="Indiana">
+                            <param id="0" name="Instance variable">nHits</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Flash" id="0" name="Flash" sid="669803633319568" type="Indiana">

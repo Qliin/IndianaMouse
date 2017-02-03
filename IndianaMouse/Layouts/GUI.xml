@@ -137,8 +137,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1341</x>
-                        <y>99.269378662</y>
+                        <x>1017</x>
+                        <y>765</y>
                         <z>0</z>
                         <width>84</width>
                         <height>70</height>
@@ -149,7 +149,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="continue" uid="10">
+                <instance type="restart_btn" uid="10">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -159,8 +159,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1314</x>
-                        <y>625.68157959</y>
+                        <x>843</x>
+                        <y>937</y>
                         <z>0</z>
                         <width>158</width>
                         <height>121</height>
@@ -226,7 +226,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="hudTxt" uid="15">
+                <instance type="pause_txt" uid="15">
                     <properties>
                         <text>Pause</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -263,8 +263,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1546</x>
-                        <y>409</y>
+                        <x>864</x>
+                        <y>764</y>
                         <z>0</z>
                         <width>84</width>
                         <height>70</height>
@@ -275,7 +275,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="exitMenu" uid="171">
+                <instance type="menu_btn" uid="171">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -285,8 +285,79 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1214</x>
-                        <y>828</y>
+                        <x>1054</x>
+                        <y>928</y>
+                        <z>0</z>
+                        <width>158</width>
+                        <height>121</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="star_score" uid="195">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1311.426635742</x>
+                        <y>170.001052856</y>
+                        <z>0</z>
+                        <width>190.853240967</width>
+                        <height>183.51272583</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501333356</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="score_txt" uid="196">
+                    <properties>
+                        <text>Score</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-64,400,0</font>
+                        <color>96,63,4</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1238</x>
+                        <y>530</y>
+                        <z>0</z>
+                        <width>405</width>
+                        <height>105</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="continue_btn" uid="197">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1509</x>
+                        <y>916</y>
                         <z>0</z>
                         <width>158</width>
                         <height>121</height>

@@ -11,8 +11,10 @@
     <saved-with-version>24100</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -386,6 +388,9 @@
             <object-type name="Keyboard" sid="359491295056899">
                 <plugin id="Keyboard" />
             </object-type>
+            <object-type global="1" name="lv_traps" sid="305115817937921">
+                <plugin id="Dictionary" />
+            </object-type>
         </object-folder>
         <object-folder name="Imeow">
             <object-type name="Imeow_hud" sid="246225437749167">
@@ -439,6 +444,7 @@
                 <instance-variables>
                     <instance-variable name="textUID" sid="851501291879752" type="number" />
                     <instance-variable name="triggered" sid="581846565214715" type="boolean" />
+                    <instance-variable name="no_stop" sid="536655776259785" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831775151132721" speed="5">
@@ -471,7 +477,7 @@
         <object-type name="Indiana" sid="444948707668051">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="life" sid="801967889726297" type="number" />
+                <instance-variable name="nHits" sid="801967889726297" type="number" />
                 <instance-variable name="currentRespawnX" sid="594313198592939" type="number" />
                 <instance-variable name="currentRespawnY" sid="638344004155317" type="number" />
                 <instance-variable name="hit" sid="107421354530638" type="boolean" />
@@ -498,8 +504,8 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="7" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="979571921611037" speed="10">
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587">
+                <animation framecount="8" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="979571921611037" speed="10">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_1.png">
                         <collision-poly>
                             <point x="0" y="0.174312" />
                             <point x="1" y="0.183486" />
@@ -507,7 +513,7 @@
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_2.png">
                         <collision-poly>
                             <point x="0" y="0.174312" />
                             <point x="1" y="0.183486" />
@@ -515,7 +521,7 @@
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_3.png">
                         <collision-poly>
                             <point x="0" y="0.174312" />
                             <point x="1" y="0.183486" />
@@ -523,7 +529,7 @@
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_4.png">
                         <collision-poly>
                             <point x="0" y="0.174312" />
                             <point x="1" y="0.183486" />
@@ -531,7 +537,7 @@
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_5.png">
                         <collision-poly>
                             <point x="0" y="0.174312" />
                             <point x="1" y="0.183486" />
@@ -539,7 +545,7 @@
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_6.png">
                         <collision-poly>
                             <point x="0" y="0.174312" />
                             <point x="1" y="0.183486" />
@@ -547,12 +553,23 @@
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_7.png">
                         <collision-poly>
                             <point x="0" y="0.174312" />
                             <point x="1" y="0.183486" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.504587" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mouse_8.png">
+                        <collision-poly>
+                            <point x="0.264368" y="0.211009" />
+                            <point x="0.494253" y="0.110092" />
+                            <point x="0.712644" y="0.229358" />
+                            <point x="0.655172" y="0.724771" />
+                            <point x="0.494253" y="1" />
+                            <point x="0.287356" y="0.770642" />
+                            <point x="0.402299" y="0.495413" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -650,10 +667,10 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396886069959922" speed="5">
                     <frame duration="1" hotspotX="0.498466" hotspotY="0.492942" original-source="C:\Users\Aecio\Documents\Pós Graduação\indiana mouse\door.png">
                         <collision-poly>
-                            <point x="0.0122699" y="0.00760043" />
-                            <point x="0.989264" y="0.00434311" />
-                            <point x="0.995399" y="0.984799" />
-                            <point x="0.00613497" y="0.981542" />
+                            <point x="0.358896" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.358896" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -731,8 +748,30 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333890022884318" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\tap_1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\tap_2.png" />
+                    <frame duration="1" hotspotX="0.50193" hotspotY="0.501529" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\tap_1.png">
+                        <collision-poly>
+                            <point x="0.243243" y="0.192661" />
+                            <point x="0.498069" y="0.119266" />
+                            <point x="0.675676" y="0.256881" />
+                            <point x="0.760618" y="0.498471" />
+                            <point x="0.872587" y="0.899083" />
+                            <point x="0.498069" y="0.98471" />
+                            <point x="0.189189" y="0.850153" />
+                            <point x="0.324324" y="0.498471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50193" hotspotY="0.501529" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\tap_2.png">
+                        <collision-poly>
+                            <point x="0.146718" y="0.116208" />
+                            <point x="0.498069" y="0.0152905" />
+                            <point x="0.783784" y="0.171254" />
+                            <point x="0.764479" y="0.498471" />
+                            <point x="0.872587" y="0.899083" />
+                            <point x="0.498069" y="0.98471" />
+                            <point x="0.189189" y="0.850153" />
+                            <point x="0.328185" y="0.498471" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -755,7 +794,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="continue" sid="771432059858857">
+        <object-type name="restart_btn" sid="771432059858857">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426976551251251" speed="5">
@@ -774,7 +813,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="hudTxt" sid="625041841726972">
+        <object-type name="pause_txt" sid="625041841726972">
             <plugin id="Text" />
         </object-type>
         <object-type name="Tilemap" sid="789345680539026">
@@ -932,6 +971,12 @@
                         <image-point name="ItemLeft" x="0.380198" y="0.688101" />
                         <image-point name="ItemRight" x="0.612541" y="0.688101" />
                         <image-point name="exit" x="0.836964" y="0.546194" />
+                        <image-point name="score_menu" x="0.213861" y="0.90983" />
+                        <image-point name="score_restart" x="0.49901" y="0.921656" />
+                        <image-point name="score_next" x="0.786799" y="0.90983" />
+                        <image-point name="star1" x="0.215842" y="0.713969" />
+                        <image-point name="star2" x="0.511551" y="0.727273" />
+                        <image-point name="star3" x="0.788779" y="0.725795" />
                         <collision-poly>
                             <point x="0.190099" y="0.21286" />
                             <point x="0.49967" y="0.258684" />
@@ -965,7 +1010,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="exitMenu" sid="701957152060207">
+        <object-type name="menu_btn" sid="701957152060207">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="526543671170247" speed="5">
@@ -1061,6 +1106,62 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LocalStorage" sid="553193445233644">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="star_score" sid="201306457680220">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="701826186262724" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501333" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Star_off.png">
+                        <collision-poly>
+                            <point x="0.320513" y="0.333333" />
+                            <point x="0.5" y="0.064" />
+                            <point x="0.679487" y="0.333333" />
+                            <point x="0.874359" y="0.498667" />
+                            <point x="0.764103" y="0.754667" />
+                            <point x="0.5" y="0.810667" />
+                            <point x="0.241026" y="0.749333" />
+                            <point x="0.110256" y="0.498667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501333" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Star_on.png">
+                        <collision-poly>
+                            <point x="0.320513" y="0.333333" />
+                            <point x="0.5" y="0.064" />
+                            <point x="0.679487" y="0.333333" />
+                            <point x="0.874359" y="0.498667" />
+                            <point x="0.764103" y="0.754667" />
+                            <point x="0.5" y="0.810667" />
+                            <point x="0.241026" y="0.749333" />
+                            <point x="0.110256" y="0.498667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="score_txt" sid="539059339708582">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="continue_btn" sid="521575395917684">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712922752447148" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502041" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\continue_UI.png">
+                        <collision-poly>
+                            <point x="0.0981595" y="0.130612" />
+                            <point x="0.5" y="0.044898" />
+                            <point x="0.901841" y="0.130612" />
+                            <point x="1" y="0.497959" />
+                            <point x="0.901841" y="0.869388" />
+                            <point x="0.5" y="0.963265" />
+                            <point x="0.095092" y="0.873469" />
+                            <point x="0.00306748" y="0.497959" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -1099,8 +1200,9 @@
         </family>
         <family name="AllText" plugin-id="Text" sid="788337597076484">
             <members>
-                <member>hudTxt</member>
                 <member>Imeow_txt</member>
+                <member>pause_txt</member>
+                <member>score_txt</member>
                 <member>tap_to_start</member>
                 <member>tapToContinue</member>
                 <member>Text</member>
@@ -1133,6 +1235,7 @@
         <event-sheet>Credits.xml</event-sheet>
         <event-sheet>Font.xml</event-sheet>
         <event-sheet>Splash.xml</event-sheet>
+        <event-sheet>Score.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="46">
@@ -1156,6 +1259,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="LocalStorage" uid="194" />
     </global-instances>
     <sounds-folder>
         <file name="Bola de Fogo.m4a" />

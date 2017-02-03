@@ -18,6 +18,9 @@
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;start_theme&quot;</param>
                 </action>
+                <action id="5" name="Check item exists" sid="640967758435842" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_traps&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="525791454732144">
@@ -27,6 +30,47 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="107909887114649" type="System">
                     <param id="0" name="Layout">StartScreen</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="429766206151101">
+            <conditions>
+                <condition id="9" name="On item exists" sid="154222325092327" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_traps&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="396107313001541" type="lv_traps">
+                    <param id="0" name="JSON">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="265940021192809">
+            <conditions>
+                <condition id="10" name="On item missing" sid="797857017445122" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_traps&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="601412134250272" type="lv_traps">
+                    <param id="0" name="Key">&quot;Lv01&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="882923246964523" type="lv_traps">
+                    <param id="0" name="Key">&quot;Lv02&quot;</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="0" name="Add key" sid="319408419190246" type="lv_traps">
+                    <param id="0" name="Key">&quot;Lv03&quot;</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="0" name="Add key" sid="846863901752836" type="lv_traps">
+                    <param id="0" name="Key">&quot;Lv04&quot;</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="0" name="Set item" sid="718893819216140" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_traps&quot;</param>
+                    <param id="1" name="Value">lv_traps.AsJSON</param>
                 </action>
             </actions>
         </event-block>
