@@ -93,6 +93,7 @@
                         <enabled>true</enabled>
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -108,6 +109,15 @@
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -140,6 +150,7 @@
                         <enabled>true</enabled>
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <behavior-instances>
@@ -226,7 +237,7 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>0.5</fade-out-time>
+                                <fade-out-time>0.3</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -260,6 +271,7 @@
                         <enabled>true</enabled>
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -303,6 +315,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                         <arrowDirection>0</arrowDirection>
                     </instance-variables>
                     <behavior-instances>
@@ -337,6 +350,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -381,6 +395,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -425,6 +440,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -478,6 +494,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -511,6 +528,7 @@
                         <enabled>true</enabled>
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -555,6 +573,7 @@
                         <enabled>true</enabled>
                         <type>dazz</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -606,6 +625,32 @@
                         <hotspotY>0.482695818</hotspotY>
                         <angle>0.245929837</angle>
                         <opacity>0.850000024</opacity>
+                    </world>
+                </instance>
+                <instance type="trap_timer" uid="37">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <current_frame>0</current_frame>
+                        <current_toggle>false</current_toggle>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1289.127441406</x>
+                        <y>197.499771118</y>
+                        <z>0</z>
+                        <width>70.675788879</width>
+                        <height>67.066810608</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

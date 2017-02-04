@@ -129,6 +129,9 @@
                     <behavior-type name="Platform" sid="561156742742562">
                         <behavior id="Platform" />
                     </behavior-type>
+                    <behavior-type name="Fade" sid="874771948486239">
+                        <behavior id="Fade" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472527864458896" speed="5">
@@ -231,7 +234,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="433151502537759" speed="0">
-                        <frame duration="1" hotspotX="0.508621" hotspotY="0.503106" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mola_1_traps.png">
+                        <frame duration="1" hotspotX="0.508621" hotspotY="0.503106" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\Mola_3_traps.png">
                             <collision-poly>
                                 <point x="0" y="0.546584" />
                                 <point x="1" y="0.546584" />
@@ -240,15 +243,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="0" name="Spring" pingpong="0" repeatcount="1" repeatto="0" sid="553838023350492" speed="20">
-                        <frame duration="1" hotspotX="0.508621" hotspotY="0.503106">
-                            <collision-poly>
-                                <point x="0" y="0.645963" />
-                                <point x="1" y="0.645963" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="3" loop="0" name="Spring" pingpong="0" repeatcount="1" repeatto="0" sid="553838023350492" speed="20">
                         <frame duration="1" hotspotX="0.508621" hotspotY="0.503106">
                             <collision-poly>
                                 <point x="0" y="0.543478" />
@@ -1165,6 +1160,125 @@
         <object-type name="Text2" sid="541017585864864">
             <plugin id="Text" />
         </object-type>
+        <object-type name="trap_timer" sid="943355830684105">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="current_frame" sid="947919830155585" type="number" />
+                <instance-variable name="current_toggle" sid="864934506071470" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="217666518774469" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_9_traps.png">
+                        <collision-poly>
+                            <point x="0.157447" y="0.165919" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.842553" y="0.165919" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_8_traps.png">
+                        <collision-poly>
+                            <point x="0.157447" y="0.165919" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.842553" y="0.165919" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_7_traps.png">
+                        <collision-poly>
+                            <point x="0.155319" y="0.163677" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.840426" y="0.168161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_6_traps.png">
+                        <collision-poly>
+                            <point x="0.155319" y="0.163677" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.840426" y="0.168161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_5_traps.png">
+                        <collision-poly>
+                            <point x="0.155319" y="0.163677" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.840426" y="0.168161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_4_traps.png">
+                        <collision-poly>
+                            <point x="0.155319" y="0.163677" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.840426" y="0.168161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_3_traps.png">
+                        <collision-poly>
+                            <point x="0.155319" y="0.163677" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.840426" y="0.168161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_2_traps.png">
+                        <collision-poly>
+                            <point x="0.155319" y="0.163677" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.840426" y="0.168161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_1_traps.png">
+                        <collision-poly>
+                            <point x="0.155319" y="0.163677" />
+                            <point x="0.5" y="0.00448431" />
+                            <point x="0.840426" y="0.168161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855319" y="0.847534" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12766" y="0.865471" />
+                            <point x="0.00638298" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -1188,6 +1302,7 @@
                 <instance-variable name="enabled" sid="388766003812608" type="boolean" />
                 <instance-variable comment="dmg or dazz" name="type" sid="978900903784955" type="string" />
                 <instance-variable name="hitIndiana" sid="231835307204689" type="boolean" />
+                <instance-variable comment="up or down" name="position" sid="703811418080254" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="283574735192411">
@@ -1198,6 +1313,8 @@
         <family name="Map" plugin-id="Tilemap" sid="854669047730884">
             <members>
                 <member>Lv01_map</member>
+                <member>Lv02_map</member>
+                <member>Lv03_map</member>
                 <member>Lv04_map</member>
             </members>
         </family>

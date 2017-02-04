@@ -72,6 +72,7 @@
                         <enabled>true</enabled>
                         <type>dazz</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -373,6 +374,7 @@
                         <enabled>true</enabled>
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <behavior-instances>
@@ -418,6 +420,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                         <arrowDirection>0</arrowDirection>
                     </instance-variables>
                     <behavior-instances>
@@ -452,6 +455,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -496,6 +500,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -540,6 +545,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -593,6 +599,7 @@
                         <enabled>true</enabled>
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
+                        <position></position>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
