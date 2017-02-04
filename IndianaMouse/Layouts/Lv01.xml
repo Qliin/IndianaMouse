@@ -583,8 +583,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2242</x>
-                        <y>607</y>
+                        <x>73</x>
+                        <y>601</y>
                         <z>0</z>
                         <width>79</width>
                         <height>158</height>
@@ -795,6 +795,7 @@
     </layers>
     <nonworld-instances>
         <instance type="lv_traps" uid="193" />
+        <instance type="lv_minTraps" uid="89" />
     </nonworld-instances>
     <effects />
 </c2layout>

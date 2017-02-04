@@ -386,6 +386,9 @@
             <object-type global="1" name="lv_traps" sid="305115817937921">
                 <plugin id="Dictionary" />
             </object-type>
+            <object-type global="1" name="lv_minTraps" sid="313340628631240">
+                <plugin id="Dictionary" />
+            </object-type>
         </object-folder>
         <object-folder name="Imeow">
             <object-type name="Imeow_hud" sid="246225437749167">
@@ -1289,6 +1292,14 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="260225619906601" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameOver" sid="790140648430941">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361337688616089" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Downloads\Indiana_mouse_gameover.png" />
                 </animation>
             </animation-folder>
         </object-type>

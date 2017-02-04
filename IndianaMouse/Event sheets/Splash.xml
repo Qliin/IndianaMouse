@@ -21,6 +21,9 @@
                 <action id="5" name="Check item exists" sid="640967758435842" type="LocalStorage">
                     <param id="0" name="Key">&quot;lv_traps&quot;</param>
                 </action>
+                <action id="5" name="Check item exists" sid="375120778111028" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_minTraps&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="525791454732144">
@@ -70,6 +73,47 @@
                 </action>
                 <action id="0" name="Set item" sid="718893819216140" type="LocalStorage">
                     <param id="0" name="Key">&quot;lv_traps&quot;</param>
+                    <param id="1" name="Value">lv_traps.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="572361601466421">
+            <conditions>
+                <condition id="9" name="On item exists" sid="216721911419669" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_minTraps&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="150339106451785" type="lv_minTraps">
+                    <param id="0" name="JSON">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="908306486523822">
+            <conditions>
+                <condition id="10" name="On item missing" sid="990656083067599" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_minTraps&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="597522946058603" type="lv_minTraps">
+                    <param id="0" name="Key">&quot;Lv01&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="473260932430363" type="lv_minTraps">
+                    <param id="0" name="Key">&quot;Lv02&quot;</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Add key" sid="922260803421380" type="lv_minTraps">
+                    <param id="0" name="Key">&quot;Lv03&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="715265915853505" type="lv_minTraps">
+                    <param id="0" name="Key">&quot;Lv04&quot;</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="0" name="Set item" sid="494756920815014" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lv_minTraps&quot;</param>
                     <param id="1" name="Value">lv_traps.AsJSON</param>
                 </action>
             </actions>

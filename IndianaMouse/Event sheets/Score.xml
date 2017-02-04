@@ -31,24 +31,53 @@
                     <param id="0" name="Name">&quot;CalcScore&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="885851243204094" type="System">
-                    <param id="0" name="Variable">playerScore</param>
-                    <param id="1" name="Value">Indiana.nHits/lv_nTraps</param>
-                </action>
-                <action id="0" name="Call function" sid="959580086817086" type="Function">
-                    <param id="0" name="Name">&quot;ShowScoreHUD&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="0" name="Call function" sid="431549694006644" type="Function">
-                    <param id="0" name="Name">&quot;CalcNStars&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="0" name="Call function" sid="520982892718450" type="Function">
-                    <param id="0" name="Name">&quot;ShowStars&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="893602106959337">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="796833578731347" type="Indiana">
+                            <param id="0" name="Instance variable">nHits</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">lv_minTraps.Get(LayoutName)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="885851243204094" type="System">
+                            <param id="0" name="Variable">playerScore</param>
+                            <param id="1" name="Value">Indiana.nHits/lv_nTraps</param>
+                        </action>
+                        <action id="0" name="Call function" sid="959580086817086" type="Function">
+                            <param id="0" name="Name">&quot;ShowScoreHUD&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="431549694006644" type="Function">
+                            <param id="0" name="Name">&quot;CalcNStars&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="520982892718450" type="Function">
+                            <param id="0" name="Name">&quot;ShowStars&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="763284657234700">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="197982297037589" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="625556382964343" type="System">
+                            <param id="0" name="Object to create">gameOver</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">ViewportRight(&quot;GUI&quot;)/2</param>
+                            <param id="3" name="Y">ViewportBottom(&quot;GUI&quot;)/2</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="262251485139503" type="System">
+                            <param id="0" name="Tag">&quot;screenTouched&quot;</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="998341792840650" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="483741291304169">
             <conditions>
@@ -79,6 +108,15 @@
                     <param id="0" name="Object">hudMenu</param>
                     <param id="1" name="Image point (optional)">6</param>
                 </action>
+                <action id="-15" name="Set visible" sid="999570712887543" type="hudMenu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="544363563396679" type="menu_btn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="905913970837619" type="restart_btn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
                 <action id="-3" name="Create object" sid="488901915132953" type="System">
                     <param id="0" name="Object to create">continue_btn</param>
                     <param id="1" name="Layer">&quot;GUI&quot;</param>
@@ -88,15 +126,6 @@
                 <action id="-4" name="Set position to another object" sid="343192720326162" type="continue_btn">
                     <param id="0" name="Object">hudMenu</param>
                     <param id="1" name="Image point (optional)">7</param>
-                </action>
-                <action id="-15" name="Set visible" sid="999570712887543" type="hudMenu">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="544363563396679" type="menu_btn">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="905913970837619" type="restart_btn">
-                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
