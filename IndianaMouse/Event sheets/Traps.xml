@@ -3,6 +3,78 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Traps</name>
     <events>
+        <event-block sid="694903131091611">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="833905325850226" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="597958448216550">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="649136518544707" type="System">
+                            <param id="0" name="Object">Trap</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="941320138958304">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="826922626900613" type="Trap">
+                                    <param id="0" name="Instance variable">activated</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="769817126459222">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="470245729233544" type="Trap">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;u&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="989567777375698" type="System">
+                                            <param id="0" name="Object to create">trap_timer</param>
+                                            <param id="1" name="Layer">&quot;Traps&quot;</param>
+                                            <param id="2" name="X">Trap.X-50</param>
+                                            <param id="3" name="Y">Trap.Y+50</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="354725737854524" type="trap_timer">
+                                            <param id="0" name="Frame number">ceil(trap.timeToActivate*2)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="509807593144543" type="Trap">
+                                            <param id="0" name="Instance variable">TrapTimeId</param>
+                                            <param id="1" name="Value">trap_timer.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="282994735781552">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="524061210500605" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="189031216984208" type="System">
+                                            <param id="0" name="Object to create">trap_timer</param>
+                                            <param id="1" name="Layer">&quot;Traps&quot;</param>
+                                            <param id="2" name="X">Trap.X+50</param>
+                                            <param id="3" name="Y">Trap.Y-50</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="377169015187403" type="trap_timer">
+                                            <param id="0" name="Frame number">ceil(trap.timeToActivate*2)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="528464580040319" type="Trap">
+                                            <param id="0" name="Instance variable">TrapTimeId</param>
+                                            <param id="1" name="Value">trap_timer.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="551189206597354">
             <conditions>
                 <condition id="17" name="On tap object" sid="960270587909231" type="Touch">
@@ -24,43 +96,21 @@
                     <param id="0" name="Time scale">1.0</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="999465533498238" type="handTutorial" />
+                <action id="0" name="Call function" sid="210121610423126" type="Function">
+                    <param id="0" name="Name">&quot;TrapActivation&quot;</param>
+                    <param id="1" name="Parameter {n}">Trap.UID{###}trap.TrapTimeId</param>
+                </action>
             </actions>
             <sub-events>
-                <event-block sid="769817126459222">
+                <event-block sid="728093577937985">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="470245729233544" type="Trap">
-                            <param id="0" name="Instance variable">position</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;u&quot;</param>
+                        <condition id="-14" name="Pick by unique ID" sid="413745152983371" type="trap_timer">
+                            <param id="0" name="Unique ID">Trap.TrapTimeId</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="989567777375698" type="System">
-                            <param id="0" name="Object to create">trap_timer</param>
-                            <param id="1" name="Layer">&quot;Traps&quot;</param>
-                            <param id="2" name="X">Trap.X-50</param>
-                            <param id="3" name="Y">Trap.Y+50</param>
-                        </action>
-                        <action id="0" name="Call function" sid="210121610423126" type="Function">
-                            <param id="0" name="Name">&quot;TrapActivation&quot;</param>
-                            <param id="1" name="Parameter {n}">Trap.UID{###}trap_timer.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="282994735781552">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="524061210500605" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="189031216984208" type="System">
-                            <param id="0" name="Object to create">trap_timer</param>
-                            <param id="1" name="Layer">&quot;Traps&quot;</param>
-                            <param id="2" name="X">Trap.X+50</param>
-                            <param id="3" name="Y">Trap.Y-50</param>
-                        </action>
-                        <action id="0" name="Call function" sid="824194593068963" type="Function">
-                            <param id="0" name="Name">&quot;TrapActivation&quot;</param>
-                            <param id="1" name="Parameter {n}">Trap.UID{###}trap_timer.UID</param>
+                        <action behavior="Sine" id="0" name="Set active" sid="734513967995111" type="trap_timer">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -142,7 +192,7 @@
                     <param id="0" name="Instance variable">current_frame</param>
                     <param id="1" name="Value">Ceil(Function.Param(1)*2)</param>
                 </action>
-                <action id="-14" name="Toggle boolean" sid="813553035717921" type="trap_timer">
+                <action disabled="1" id="-14" name="Toggle boolean" sid="813553035717921" type="trap_timer">
                     <param id="0" name="Instance variable">current_toggle</param>
                 </action>
             </actions>
@@ -159,7 +209,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="352190767015008">
+                <event-block disabled="1" sid="352190767015008">
                     <conditions>
                         <condition id="-22" name="Else" sid="980211906577740" type="System" />
                     </conditions>
@@ -529,6 +579,17 @@
                 <action id="-14" name="Set object time scale" sid="922373615292328" type="System">
                     <param id="0" name="Object">handTutorial</param>
                     <param id="1" name="Time scale">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="375826059598162">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="342909443694062" type="Trap" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-13" name="Set boolean" sid="424966461996836" type="Trap">
+                    <param id="0" name="Instance variable">activated</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

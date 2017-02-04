@@ -73,6 +73,7 @@
                         <type>dazz</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -375,6 +376,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <behavior-instances>
@@ -421,6 +423,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                         <arrowDirection>0</arrowDirection>
                     </instance-variables>
                     <behavior-instances>
@@ -456,6 +459,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -501,6 +505,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -546,6 +551,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -600,6 +606,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />

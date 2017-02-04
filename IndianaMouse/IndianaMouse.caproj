@@ -1166,9 +1166,14 @@
                 <instance-variable name="current_frame" sid="947919830155585" type="number" />
                 <instance-variable name="current_toggle" sid="864934506071470" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="411190352900030">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="217666518774469" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\emanu_000\Google Drive\Game Design (1)\Imeowtap\Sprites\timer_9_traps.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\projects\posUEA\games\IndianaMouse\start_count.png">
                         <collision-poly>
                             <point x="0.157447" y="0.165919" />
                             <point x="0.5" y="0.00448431" />
@@ -1279,6 +1284,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite4" sid="629238311907369">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="260225619906601" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Trap" plugin-id="Sprite" sid="871016558091897">
@@ -1303,6 +1316,7 @@
                 <instance-variable comment="dmg or dazz" name="type" sid="978900903784955" type="string" />
                 <instance-variable name="hitIndiana" sid="231835307204689" type="boolean" />
                 <instance-variable comment="up or down" name="position" sid="703811418080254" type="string" />
+                <instance-variable name="TrapTimeId" sid="493845569691933" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="283574735192411">

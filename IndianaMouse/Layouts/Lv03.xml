@@ -605,6 +605,7 @@
                         <type>dazz</type>
                         <hitIndiana>false</hitIndiana>
                         <position>d</position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -639,6 +640,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position>u</position>
+                        <TrapTimeId>0</TrapTimeId>
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <behavior-instances>
@@ -685,6 +687,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -719,6 +722,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position>u</position>
+                        <TrapTimeId>0</TrapTimeId>
                         <arrowDirection>90</arrowDirection>
                     </instance-variables>
                     <behavior-instances>
@@ -754,6 +758,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position>u</position>
+                        <TrapTimeId>0</TrapTimeId>
                         <arrowDirection>90</arrowDirection>
                     </instance-variables>
                     <behavior-instances>
@@ -789,6 +794,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />

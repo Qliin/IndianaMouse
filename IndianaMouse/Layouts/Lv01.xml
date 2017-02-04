@@ -499,6 +499,7 @@
                         <type>dazz</type>
                         <hitIndiana>false</hitIndiana>
                         <position>d</position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -533,6 +534,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -581,8 +583,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>67</x>
-                        <y>618</y>
+                        <x>2242</x>
+                        <y>607</y>
                         <z>0</z>
                         <width>79</width>
                         <height>158</height>

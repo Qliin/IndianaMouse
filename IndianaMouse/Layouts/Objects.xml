@@ -94,6 +94,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -151,6 +152,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                         <endAngle>60</endAngle>
                     </instance-variables>
                     <behavior-instances>
@@ -272,6 +274,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -316,6 +319,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                         <arrowDirection>0</arrowDirection>
                     </instance-variables>
                     <behavior-instances>
@@ -351,6 +355,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -396,6 +401,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -441,6 +447,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -495,6 +502,7 @@
                         <type>sup</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -529,6 +537,7 @@
                         <type>dmg</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -574,6 +583,7 @@
                         <type>dazz</type>
                         <hitIndiana>false</hitIndiana>
                         <position></position>
+                        <TrapTimeId>0</TrapTimeId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -636,8 +646,23 @@
                     </properties>
                     <instance-variables>
                         <current_frame>0</current_frame>
-                        <current_toggle>false</current_toggle>
+                        <current_toggle>true</current_toggle>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>0.7</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>10</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
